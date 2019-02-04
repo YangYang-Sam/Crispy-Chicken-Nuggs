@@ -1041,7 +1041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.14631534, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1167,7 +1167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Staminas: 100
   MaxStamina: 100
-  StaminaDecreasePerFrame: 20
+  StaminaDecreasePerFrame: 40
   StaminaIncreasePerFrame: 25
   StaminaTimeToRegen: 2
   tiredspeed: 1
@@ -1186,33 +1186,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8ee074c9cb9f414c84dd80efd0ac155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isBreath: 1
-  MinHigh: 0.8
-  MaxHigh: 0.9
-  Freakness: 1.7
-  movement: 0
 --- !u!1 &1096955961
 GameObject:
   m_ObjectHideFlags: 0
