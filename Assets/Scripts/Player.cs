@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
 
     public float speed;
     public float speedup;
+    public float startspeed;
     //grivaty
     public float ySpeed;
     public float gravity;
@@ -30,7 +31,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         p = GetComponent<CharacterController>();
-
+        startspeed = speed;
     }
 
     // Update is called once per frame
@@ -81,13 +82,20 @@ public class Player : MonoBehaviour
         fpsCam.localRotation = CamRotation;
 
         //speed up
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            speed = speed * speedup;
-        }
-        if(Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            speed = speed / speedup;
-        }
+
+        //if (Input.GetKeyDown(KeyCode.LeftShift))
+        //{
+        //    speed = speed * speedup;
+        //}
+        //if(Input.GetKeyUp(KeyCode.LeftShift))
+        //{
+        //    speed = speed / speedup;
+        //}
     }
+    //test
+    //public string Print()
+    //{
+    //    string f = "hello";
+    //    return f;
+    //}
 }
