@@ -9,10 +9,16 @@ public class Patrol : MonoBehaviour
     public float waitTime;
     public float startWaitTime;
     public Transform[] moveSpots;
+    public Transform player;
     private int randomSpot;
+    public bool isPatrolling;
+    public bool isFollowing;
+    private Animator animator;
+
     // On start select a random spot to move to
     void Start()
     {
+        animator = GetComponent<Animator>();
         waitTime = startWaitTime;
         randomSpot = Random.Range(0, moveSpots.Length);
     }
@@ -20,13 +26,42 @@ public class Patrol : MonoBehaviour
     // Change position and move towards new spot on update
     void Update()
     {
-        EnemyPatrol();  
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            isFollowing = true;
+            isPatrolling = false;
+           
+        }
 
+        if (isFollowing == true)
+        {
+            FollowPlayer();
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            isFollowing = false;
+            isPatrolling = true;
+        }
+
+        if (isPatrolling == true)
+        {
+            EnemyPatrol();
+        }
+
+        animator.SetBool("isPatrolling", isPatrolling);
+        animator.SetBool("isFollowing", isFollowing);
+
+
+        {
+            
+        }
     }
 
     void EnemyPatrol()
     {
         transform.position = Vector3.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
+        transform.LookAt(moveSpots[randomSpot]);
         //If cube comes into contact of a distance of 0.2 of the position wait
         if (Vector3.Distance(transform.position, moveSpots[randomSpot].position) < 0.2f)
         {   //if wait time is less or equal to 0 move to another spot
@@ -43,4 +78,12 @@ public class Patrol : MonoBehaviour
 
         }
     }
+
+    void FollowPlayer()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, player.position , speed * Time.deltaTime);
+        transform.LookAt(player);
+    }
+        
+    
 }
