@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4c725fe963b534280bc779c2e7f23fb5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - sonarShader: {fileID: 4800000, guid: 6d12e7ab487bf49d18b89038af741a18, type: 3}
+  - AdditivedShader: {fileID: 4800000, guid: 7b33c3d3f8f3c134b8755ad7ddd81f47, type: 3}
+  - camera: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

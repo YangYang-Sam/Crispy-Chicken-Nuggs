@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private float zInput;
     private float xMouse;
     private float yMouse;
+    private float nextsonar;
 
     public float speed;
     public float speedup;
@@ -19,6 +20,9 @@ public class Player : MonoBehaviour
     public float ySpeed;
     public float gravity;
     public float jump=15;
+
+    public SonarFxDescriptor sonarcontrol;
+    public float sonarrate=2f;
 
     public Transform fpsCam;
     [Range(5,15)]
@@ -39,6 +43,7 @@ public class Player : MonoBehaviour
     {
         GetInput();
         Updatemovement();
+
     }
 
     void GetInput()
@@ -47,6 +52,7 @@ public class Player : MonoBehaviour
         zInput = Input.GetAxis("Vertical") * speed;
         xMouse = Input.GetAxis("Mouse X") * mSpeed;
         yMouse = Input.GetAxis("Mouse Y") * mSpeed;
+
     }
 
     void Updatemovement()
@@ -81,21 +87,14 @@ public class Player : MonoBehaviour
         Quaternion CamRotation = Quaternion.Euler(pitch, 0, 0);
         fpsCam.localRotation = CamRotation;
 
-        //speed up
+        //controlsonar
 
-        //if (Input.GetKeyDown(KeyCode.LeftShift))
-        //{
-        //    speed = speed * speedup;
-        //}
-        //if(Input.GetKeyUp(KeyCode.LeftShift))
-        //{
-        //    speed = speed / speedup;
-        //}
+        if (Input.GetKeyDown(KeyCode.F)&&Time.time>nextsonar)
+        {
+            nextsonar = Time.time + sonarrate;
+            sonarcontrol.origin = transform.position;
+            SonarFx.Instance.StartSonar(sonarcontrol);
+        }
     }
-    //test
-    //public string Print()
-    //{
-    //    string f = "hello";
-    //    return f;
-    //}
+    
 }
