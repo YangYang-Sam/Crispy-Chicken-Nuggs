@@ -280,79 +280,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &188540826
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 188540827}
-  - component: {fileID: 188540828}
-  m_Layer: 0
-  m_Name: Camera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &188540827
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 188540826}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 268933077}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &188540828
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 188540826}
-  m_Enabled: 0
-  serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
-  m_projectionMatrixMode: 1
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: 16a577287c13637448ed7e613516d53d, type: 2}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 0
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
 --- !u!1 &203562459 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8022409149734432212, guid: 0692e2a54887c3b4f8d4e283737a8e00,
@@ -450,36 +377,6 @@ Transform:
   m_Father: {fileID: 600384981}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!1 &268933076 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8022409149507689025, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-    type: 3}
-  m_PrefabInstance: {fileID: 8022409149535072271}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &268933077 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8022409149507689054, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-    type: 3}
-  m_PrefabInstance: {fileID: 8022409149535072271}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &268933078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 268933076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c725fe963b534280bc779c2e7f23fb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sonarShader: {fileID: 4800000, guid: 6d12e7ab487bf49d18b89038af741a18, type: 3}
-  AdditivedShader: {fileID: 4800000, guid: 7b33c3d3f8f3c134b8755ad7ddd81f47, type: 3}
-  camera: {fileID: 188540828}
-  texture: {fileID: 8400000, guid: 16a577287c13637448ed7e613516d53d, type: 2}
-  descriptors: []
-  timers: []
 --- !u!1 &395680057
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,25 +851,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785322651}
   m_CullTransparentMesh: 0
---- !u!1 &1288875812 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 63568258372900425, guid: d66dd5a67d4074948b173e3ca52e7f94,
-    type: 3}
-  m_PrefabInstance: {fileID: 63568259427642992}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1288875813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288875812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07f7f438c56fffe4d971e2e2f4cc4651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wave: {fileID: 100000, guid: 37c6b64aafe57474a8c171dece05cdb9, type: 3}
 --- !u!1 &1458198841
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,11 +1080,6 @@ PrefabInstance:
       propertyPath: HoldPostion
       value: 
       objectReference: {fileID: 203562459}
-    - target: {fileID: 63568258372900426, guid: d66dd5a67d4074948b173e3ca52e7f94,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d66dd5a67d4074948b173e3ca52e7f94, type: 3}
 --- !u!1001 &8022409149535072271
@@ -1276,70 +1149,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8022409148860308932, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-        type: 3}
-      propertyPath: sonarcontrol.mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8022409148860308932, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-        type: 3}
-      propertyPath: sonarcontrol.duration
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8022409148860308932, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-        type: 3}
-      propertyPath: sonarcontrol.waveExponent
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8022409148860308932, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-        type: 3}
-      propertyPath: sonarcontrol.waveInterval
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8022409148860308932, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-        type: 3}
-      propertyPath: sonarcontrol.waveSpeed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8022409148860308932, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-        type: 3}
-      propertyPath: sonarcontrol.waveAmplitude
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8022409148860308932, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-        type: 3}
-      propertyPath: sonarcontrol.waveColor.key0.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8022409148860308932, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-        type: 3}
-      propertyPath: sonarcontrol.waveColor.key0.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8022409148860308932, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-        type: 3}
-      propertyPath: sonarcontrol.waveColor.key0.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8022409148860308932, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-        type: 3}
-      propertyPath: sonarcontrol.waveColor.key1.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8022409148860308932, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-        type: 3}
-      propertyPath: sonarcontrol.waveColor.key1.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8022409148860308932, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-        type: 3}
-      propertyPath: sonarcontrol.waveColor.key1.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8022409149507689025, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-        type: 3}
-      propertyPath: m_TagString
-      value: MainCamera
+    - target: {fileID: 188540826, guid: 0692e2a54887c3b4f8d4e283737a8e00, type: 3}
+      propertyPath: m_Name
+      value: Sonar Camera
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0692e2a54887c3b4f8d4e283737a8e00, type: 3}
