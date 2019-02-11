@@ -106,6 +106,8 @@ public class SonarFx : MonoSingleton<SonarFx>
 		
 		Graphics.Blit(source, destination);
 
+        camera.targetTexture = null;
+
 		RenderTexture.ReleaseTemporary(tempTexure);
 	}
 
