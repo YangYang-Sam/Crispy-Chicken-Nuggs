@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Almgp_VHS_factory/factory.unity
+  - enabled: 0
+    path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/TitleMenu.unity
+    guid: af5c56e4204466049a93f44cf105b7c5
+  - enabled: 1
+    path: Assets/Scenes/AI.unity
+    guid: fd6c7f945016fbc4c8a4c3c2617a808b
   m_configObjects: {}
