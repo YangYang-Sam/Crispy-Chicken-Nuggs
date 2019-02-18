@@ -83,11 +83,14 @@ public class Player : MonoBehaviour
         p.Move((move + new Vector3(0, ySpeed, 0)) * Time.deltaTime);
 
         //mouse control view
-            transform.Rotate(0, xMouse, 0);
-            pitch -= yMouse;
-            pitch = Mathf.Clamp(pitch, -pitchRange, pitchRange);
-            Quaternion CamRotation = Quaternion.Euler(pitch, 0, 0);
-            fpsCam.localRotation = CamRotation;
+
+        xMouse *= Time.deltaTime * 20;
+        yMouse *= Time.deltaTime * 20;
+        transform.Rotate(0, xMouse, 0);
+        pitch -= yMouse;
+        pitch = Mathf.Clamp(pitch, -pitchRange, pitchRange);
+        Quaternion CamRotation = Quaternion.Euler(pitch, 0, 0);
+        fpsCam.localRotation = CamRotation;
 
         //controlsonar
 
