@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 8022409148860308931}
   - component: {fileID: 8022409148860308930}
   - component: {fileID: 873185959}
+  - component: {fileID: 2919895894323154658}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -222,6 +223,55 @@ MonoBehaviour:
   breathetime: 2
   breathefreq: 8
 --- !u!114 &873185959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8022409148860308935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5adfe7070a69fa44be2030788e5153b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mode: 0
+  _duration: 5
+  _direction: {x: 0, y: 0, z: 1}
+  _origin: {x: 0, y: 0, z: 0}
+  _waveColor:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  _waveAmplitude: 2
+  _waveExponent: 22
+  _waveInterval: 20
+  _waveSpeed: 10
+--- !u!114 &2919895894323154658
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
