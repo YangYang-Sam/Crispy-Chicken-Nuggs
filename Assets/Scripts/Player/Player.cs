@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private CharacterController p;
+    //private MenuController pause;
     private float pitch;
     //member input values
     private float xInput;
@@ -35,6 +36,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         p = GetComponent<CharacterController>();
+        //pause = GetComponent<MenuController>();
         startspeed = speed;
     }
 
@@ -81,15 +83,15 @@ public class Player : MonoBehaviour
         p.Move((move + new Vector3(0, ySpeed, 0)) * Time.deltaTime);
 
         //mouse control view
-        transform.Rotate(0, xMouse, 0);
-        pitch -= yMouse;
-        pitch = Mathf.Clamp(pitch, -pitchRange, pitchRange);
-        Quaternion CamRotation = Quaternion.Euler(pitch, 0, 0);
-        fpsCam.localRotation = CamRotation;
+            transform.Rotate(0, xMouse, 0);
+            pitch -= yMouse;
+            pitch = Mathf.Clamp(pitch, -pitchRange, pitchRange);
+            Quaternion CamRotation = Quaternion.Euler(pitch, 0, 0);
+            fpsCam.localRotation = CamRotation;
 
         //controlsonar
 
-        if (Input.GetKeyDown(KeyCode.F)&&Time.time>nextsonar)
+        if(Input.GetKeyDown(KeyCode.F)&&Time.time>nextsonar)
         {
             nextsonar = Time.time + sonarrate;
             sonarcontrol.origin = transform.position;
