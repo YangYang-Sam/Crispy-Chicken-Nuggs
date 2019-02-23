@@ -8,8 +8,10 @@ public class MenuController : MonoBehaviour
     public bool isPaused=false;
     public string titleScene;
     public GameObject pauseMenu;
+    public bool isDead=false;
+    public GameObject deathMenu;
+    public float menuTimer=2f;
 
-    
     void Start()
     {
 
@@ -17,6 +19,7 @@ public class MenuController : MonoBehaviour
 
     void Update()
     {
+        //Esc to pause
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
@@ -33,6 +36,18 @@ public class MenuController : MonoBehaviour
             }
 
         }
+
+        if (isDead)
+        {
+            if (menuTimer>0)
+            {
+                menuTimer = menuTimer - Time.deltaTime;
+                return;
+            }
+            deathMenu.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+        }
+
     }
 
     public void ResumeGame()
@@ -48,5 +63,10 @@ public class MenuController : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(titleScene);
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
