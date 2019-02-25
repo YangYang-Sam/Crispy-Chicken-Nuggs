@@ -5,7 +5,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private CharacterController p;
-    //private MenuController pause;
     private float pitch;
     //member input values
     private float xInput;
@@ -25,6 +24,8 @@ public class Player : MonoBehaviour
     public SonarFxDescriptor sonarcontrol;
     public float sonarrate=2f;
 
+    public MenuController pause;
+
     public Transform fpsCam;
     [Range(5,15)]
     public float mSpeed=10f;
@@ -36,7 +37,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         p = GetComponent<CharacterController>();
-        //pause = GetComponent<MenuController>();
         startspeed = speed;
     }
 
@@ -99,6 +99,13 @@ public class Player : MonoBehaviour
             nextsonar = Time.time + sonarrate;
             sonarcontrol.origin = transform.position;
             SonarFx.Instance.StartSonar(sonarcontrol);
+        }
+
+        //Pause Game
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pause.PauseGame();
         }
     }
     

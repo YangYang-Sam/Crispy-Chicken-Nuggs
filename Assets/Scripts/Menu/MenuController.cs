@@ -19,24 +19,6 @@ public class MenuController : MonoBehaviour
 
     void Update()
     {
-        //Esc to pause
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (isPaused)
-            {
-                ResumeGame();
-            }
-            else
-            {
-                isPaused = true;
-                pauseMenu.SetActive(true);
-                Time.timeScale = 0f;
-
-                Cursor.lockState  = CursorLockMode.None;
-            }
-
-        }
-
         if (isDead)
         {
             if (menuTimer>0)
@@ -47,7 +29,6 @@ public class MenuController : MonoBehaviour
             deathMenu.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
         }
-
     }
 
     public void ResumeGame()
@@ -68,5 +49,22 @@ public class MenuController : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void PauseGame()
+    {
+        if (isPaused)
+        {
+            ResumeGame();
+        }
+        else
+        {
+            isPaused = true;
+            pauseMenu.SetActive(true);
+            Time.timeScale = 0f;
+
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 }

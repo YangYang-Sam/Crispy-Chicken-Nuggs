@@ -185,6 +185,7 @@ MonoBehaviour:
     waveInterval: 100
     waveSpeed: 20
   sonarrate: 2
+  pause: {fileID: 0}
   fpsCam: {fileID: 8022409149507689054}
   mSpeed: 15
   pitchRange: 45
@@ -284,7 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 812305505}
   p: {fileID: 8022409148860308932}
-  d: {fileID: 7399470415673114548, guid: aeab9c81bc5c8794c9d6d4a21cde877f, type: 3}
+  d: {fileID: 0}
 --- !u!1 &8022409149190616752
 GameObject:
   m_ObjectHideFlags: 0
