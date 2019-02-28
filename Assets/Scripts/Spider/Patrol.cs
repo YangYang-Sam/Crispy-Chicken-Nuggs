@@ -9,6 +9,7 @@ public class Patrol : MonoBehaviour
     public float speedMultiplier;
     public float waitTime;
     public float startWaitTime;
+    public float delayAttack;
     public Transform gravitate;
     public Transform[] moveSpots;
     public Transform player;
@@ -19,6 +20,7 @@ public class Patrol : MonoBehaviour
     private Animator animator;
     [SerializeField]
     private GameObject lure;
+    private Vector3 PlayersLastKnownPosition;
 
     // On start make sure the animator idle animation begins then aqquire random spot to move to but don't move until given command
     void Start()
@@ -27,6 +29,7 @@ public class Patrol : MonoBehaviour
         waitTime = startWaitTime;
         randomSpot = Random.Range(0, moveSpots.Length);
     }
+   
 
     // On update use both bools to define whether to follow the player or follow the patrol points
     void Update()
@@ -40,13 +43,15 @@ public class Patrol : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             isFollowing = false;
-            isPatrolling = true;
+            PlayersLastKnownPosition = player.position;
+            transform.position = Vector3.MoveTowards(transform.position, PlayersLastKnownPosition, speed * speedMultiplier * Time.deltaTime);
         }
 
         if (isFollowing == true)
         {
             FollowPlayer();
         }
+
 
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -59,8 +64,6 @@ public class Patrol : MonoBehaviour
             EnemyPatrol();
 
         }
-
-       
 
         if (isMovingToPosition == true)
         {
@@ -95,21 +98,26 @@ public class Patrol : MonoBehaviour
             }
 
         }
-    void Update()
-        {                   
-           
-
-        }
+  
     }
     // On follow player move toward player position and also look at player when doing so
     void FollowPlayer()
     {
         transform.position = Vector3.MoveTowards(transform.position, player.position , speed * speedMultiplier * Time.deltaTime);
         transform.LookAt(player);
+       
     }
     // When moving to position make sure other bools are set to false
     public void MoveToPosition(Vector3 target)
     {
+        StartCoroutine(MovewithDelay(target));   
+    }
+    
+
+    IEnumerator MovewithDelay(Vector3 target)
+    {
+        yield return new WaitForSeconds(delayAttack);
+
         Debug.Log("Moving to position");
         isPatrolling = false;
         isFollowing = false;
@@ -127,5 +135,9 @@ public class Patrol : MonoBehaviour
         }
 
     }
- 
+
+    void movetoLastPayerPos()
+    {
+
+    }
 }
