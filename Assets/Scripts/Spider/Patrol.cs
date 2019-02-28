@@ -9,6 +9,7 @@ public class Patrol : MonoBehaviour
     public float speedMultiplier;
     public float waitTime;
     public float startWaitTime;
+    public Transform gravitate;
     public Transform[] moveSpots;
     public Transform player;
     private int randomSpot;
@@ -36,6 +37,11 @@ public class Patrol : MonoBehaviour
             isPatrolling = false;
 
         }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            isFollowing = false;
+            isPatrolling = true;
+        }
 
         if (isFollowing == true)
         {
@@ -61,7 +67,7 @@ public class Patrol : MonoBehaviour
             MoveToPosition(lure.gameObject.transform.position);
         }
     
-
+        // animator then selects which animation to play in terms of what bool is selected
 
         animator.SetBool("isPatrolling", isPatrolling);
         animator.SetBool("isFollowing", isFollowing);
@@ -89,6 +95,11 @@ public class Patrol : MonoBehaviour
             }
 
         }
+    void Update()
+        {                   
+           
+
+        }
     }
     // On follow player move toward player position and also look at player when doing so
     void FollowPlayer()
@@ -96,20 +107,20 @@ public class Patrol : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, player.position , speed * speedMultiplier * Time.deltaTime);
         transform.LookAt(player);
     }
-
+    // When moving to position make sure other bools are set to false
     public void MoveToPosition(Vector3 target)
     {
         Debug.Log("Moving to position");
         isPatrolling = false;
         isFollowing = false;
         isMovingToPosition = true;
-
+        // If the moving to position is true then reiterate the same principle as when chasing player
         if (isMovingToPosition == true)
         {
             transform.position = Vector3.MoveTowards(transform.position, target, speed * speedMultiplier * Time.deltaTime);
             transform.LookAt(target);
         }
-
+        // Once the spider is within 0.2 meters of the target stop moving to position
         if (Vector3.Distance(transform.position, target) < 0.2f)
         {
             isMovingToPosition = false;
