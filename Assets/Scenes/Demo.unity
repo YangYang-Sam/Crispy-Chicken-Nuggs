@@ -212,8 +212,8 @@ MonoBehaviour:
   isMovingToPosition: 0
   isFollowing: 0
   lure: {fileID: 357597510}
---- !u!64 &41489206
-MeshCollider:
+--- !u!65 &41489206
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -222,10 +222,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: f5a9bd478ca094495a4520e37f57420d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 4.6123734, y: 1, z: 3.6225433}
+  m_Center: {x: 0, y: 0.79999995, z: 0.39247513}
 --- !u!4 &151528369 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1596636609577000302, guid: 0273804133a9bcf4a8ccb82aaabdce4b,
