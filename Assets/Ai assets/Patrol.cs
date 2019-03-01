@@ -22,9 +22,14 @@ public class Patrol : MonoBehaviour
     private GameObject lure;
     private Vector3 PlayersLastKnownPosition;
 
+    bool playerlastseen = false;
+    bool lostPlayer = false;
+
     // On start make sure the animator idle animation begins then aqquire random spot to move to but don't move until given command
     void Start()
     {
+        isMovingToPosition = true;
+
         animator = GetComponent<Animator>();
         waitTime = startWaitTime;
         randomSpot = Random.Range(0, moveSpots.Length);
@@ -43,11 +48,17 @@ public class Patrol : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             isFollowing = false;
-            PlayersLastKnownPosition = player.position;
-            transform.position = Vector3.MoveTowards(transform.position, PlayersLastKnownPosition, speed * speedMultiplier * Time.deltaTime);
+            isPatrolling = false;
+            lostPlayer = true;
+            playerlastseen = false;
         }
 
-        if (isFollowing == true)
+        if(lostPlayer && !isFollowing && !isPatrolling )
+        {
+            movetoLastPayerPos();
+        }
+
+        if (isFollowing)
         {
             FollowPlayer();
         }
@@ -59,13 +70,13 @@ public class Patrol : MonoBehaviour
             isPatrolling = true;
         }
 
-        if (isPatrolling == true)
+        if (isPatrolling)
         {
             EnemyPatrol();
 
         }
 
-        if (isMovingToPosition == true)
+        if (isMovingToPosition)
         {
             MoveToPosition(lure.gameObject.transform.position);
         }
@@ -136,8 +147,34 @@ public class Patrol : MonoBehaviour
 
     }
 
+
     void movetoLastPayerPos()
     {
+        StopAllCoroutines();
 
+        if (!playerlastseen)
+        {
+            playerlastseen = true;
+            PlayersLastKnownPosition = player.position;
+            Debug.Log("got ya");
+        }
+
+        if (transform.position != PlayersLastKnownPosition)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, PlayersLastKnownPosition, speed * speedMultiplier * Time.deltaTime);
+            transform.LookAt(PlayersLastKnownPosition);
+        }
+        else
+        {
+            StartCoroutine(waitLostPlayer());
+        }
+    }
+
+    IEnumerator waitLostPlayer()
+    {
+        yield return new WaitForSeconds(3.0f);
+        isPatrolling = true;
+        lostPlayer = false;
+       
     }
 }
