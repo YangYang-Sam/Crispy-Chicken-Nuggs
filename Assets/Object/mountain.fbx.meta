@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 08b6a59cad32f83479ff0839151ffc42
+guid: e485f7b81d871a043bfe0ca317bb2216
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: treehouse_c_lo_tree8
+    100002: pCone1
+    100004: pCone2
+    100006: pCylinder1
+    100008: transform1
+    100010: transform2
     400000: //RootNode
-    400002: treehouse_c_lo_tree8
-    2100000: lambert2
-    2300000: treehouse_c_lo_tree8
-    3300000: treehouse_c_lo_tree8
-    4300000: treehouse_c_lo_tree8
-    6400000: treehouse_c_lo_tree8
-    9500000: //RootNode
-    2186277476908879412: ImportLogs
+    400002: pCone1
+    400004: pCone2
+    400006: pCylinder1
+    400008: transform1
+    400010: transform2
+    2100000: lambert1
+    2300000: pCone2
+    3300000: pCone2
+    4300000: pCone2
+    6400000: pCone2
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -66,8 +72,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -94,7 +100,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
