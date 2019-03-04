@@ -596,7 +596,7 @@ PrefabInstance:
         type: 3}
       propertyPath: HoldPostion
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2105924443}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d66dd5a67d4074948b173e3ca52e7f94, type: 3}
 --- !u!1 &955735765
@@ -951,26 +951,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8022409148860308933, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-        type: 3}
-      propertyPath: m_SlopeLimit
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 8022409148860308932, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-        type: 3}
-      propertyPath: gravity
-      value: -15
-      objectReference: {fileID: 0}
     - target: {fileID: 8022409148860308932, guid: 0692e2a54887c3b4f8d4e283737a8e00,
         type: 3}
       propertyPath: pause
       value: 
       objectReference: {fileID: 18606273}
-    - target: {fileID: 8022409148860308930, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-        type: 3}
-      propertyPath: StaminaDecreasePerFrame
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 564717858, guid: 0692e2a54887c3b4f8d4e283737a8e00, type: 3}
       propertyPath: d
       value: 
@@ -1121,6 +1106,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7f42bceef7b7464683773379ac8b0d5, type: 3}
+--- !u!1 &2105924443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8022409149734432212, guid: 0692e2a54887c3b4f8d4e283737a8e00,
+    type: 3}
+  m_PrefabInstance: {fileID: 1648035288}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &728198006986502732
 PrefabInstance:
   m_ObjectHideFlags: 0
