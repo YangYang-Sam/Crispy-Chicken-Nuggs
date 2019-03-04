@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1dfc0fcc63f963d45852e3c05147aa7d
+guid: f194a50c8afee1b49a509e47f7fd1464
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -485,13 +485,17 @@ ModelImporter:
     100958: pCube4
     100960: pCube5
     100962: pCube6
-    100964: pSphere1
-    100966: transform1
-    100968: transform2
-    100970: transform3
-    100972: transform4
-    100974: transform5
-    100976: transform6
+    100964: pCube7
+    100966: pCube8
+    100968: pSphere1
+    100970: transform1
+    100972: transform2
+    100974: transform3
+    100976: transform4
+    100978: transform5
+    100980: transform6
+    100982: transform7
+    100984: transform8
     400000: group
     400002: group1
     400004: //RootNode
@@ -974,26 +978,30 @@ ModelImporter:
     400958: pCube4
     400960: pCube5
     400962: pCube6
-    400964: pSphere1
-    400966: transform1
-    400968: transform2
-    400970: transform3
-    400972: transform4
-    400974: transform5
-    400976: transform6
+    400964: pCube7
+    400966: pCube8
+    400968: pSphere1
+    400970: transform1
+    400972: transform2
+    400974: transform3
+    400976: transform4
+    400978: transform5
+    400980: transform6
+    400982: transform7
+    400984: transform8
     2100000: lambert1
     2300000: pasted__pCube13
     2300002: pasted__polySurface10
-    2300004: pCube6
+    2300004: pCube8
     3300000: pasted__pCube13
     3300002: pasted__polySurface10
-    3300004: pCube6
+    3300004: pCube8
     4300000: pasted__pCube13
     4300002: pasted__polySurface10
-    4300004: pCube6
+    4300004: pCube8
     6400000: pasted__pCube13
     6400002: pasted__polySurface10
-    6400004: pCube6
+    6400004: pCube8
   externalObjects: {}
   materials:
     importMaterials: 1

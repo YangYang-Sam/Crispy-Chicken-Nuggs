@@ -20,15 +20,15 @@ public class Door : MonoBehaviour
 
     public void OpenDoorMethod()
     {
-        tf.Rotate(Vector3.up, 10000 * Time.deltaTime);
-        Debug.Log("close");
+        tf.Rotate(Vector3.up, 100);
+        Debug.Log("close" + name);
         isOpen = !isOpen;
 
     }
     public void CloseDoorMethod()
     {
-        tf.Rotate(Vector3.up, -10000 * Time.deltaTime);
-        Debug.Log("open");
+        tf.Rotate(Vector3.up, -100);
+        Debug.Log("open" + name);
         isOpen = !isOpen;
     }
 
