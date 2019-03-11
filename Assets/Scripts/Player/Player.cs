@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     private float xMouse;
     private float yMouse;
     private float nextsonar;
-
+    public AudioSource sonarClap;
     public float speed;
     public float speedup;
     public float startspeed;
@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     public float ySpeed;
     public float gravity;
     public float jump=15;
+    
+
 
     public SonarFxDescriptor sonarcontrol;
     public float sonarrate=2f;
@@ -96,6 +98,7 @@ public class Player : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.F)&&Time.time>nextsonar)
         {
+            sonarClap.Play();
             nextsonar = Time.time + sonarrate;
             sonarcontrol.origin = transform.position;
             SonarFx.Instance.StartSonar(sonarcontrol);
