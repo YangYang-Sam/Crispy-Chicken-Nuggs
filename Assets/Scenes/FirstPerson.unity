@@ -1861,13 +1861,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 564717858, guid: 0692e2a54887c3b4f8d4e283737a8e00, type: 3}
-      propertyPath: d
-      value: 
-      objectReference: {fileID: 679598772}
     - target: {fileID: 8022409148860308932, guid: 0692e2a54887c3b4f8d4e283737a8e00,
         type: 3}
       propertyPath: pause
+      value: 
+      objectReference: {fileID: 679598772}
+    - target: {fileID: 564717858, guid: 0692e2a54887c3b4f8d4e283737a8e00, type: 3}
+      propertyPath: d
       value: 
       objectReference: {fileID: 679598772}
     m_RemovedComponents: []
