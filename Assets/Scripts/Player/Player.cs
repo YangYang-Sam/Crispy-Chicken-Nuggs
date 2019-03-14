@@ -99,6 +99,7 @@ public class Player : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.F)&&Time.time>nextsonar)
         {
             sonarClap.Play();
+            sonarClap.pitch = Random.Range(0.75f, 1.25f);
             nextsonar = Time.time + sonarrate;
             sonarcontrol.origin = transform.position;
             SonarFx.Instance.StartSonar(sonarcontrol);
