@@ -48,6 +48,8 @@ public class Patrol : MonoBehaviour
         {
             isFollowing = true;
             isPatrolling = false;
+            isMovingToPosition = false;
+            isMovingToWeb = false;
 
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
@@ -66,30 +68,36 @@ public class Patrol : MonoBehaviour
         if (isFollowing)
         {
             FollowPlayer();
-        }
-
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            isFollowing = false;
-            isPatrolling = true;
+            isMovingToWeb = false;
+            isPatrolling = false;
+            isMovingToPosition = false;
         }
 
         if (isPatrolling)
         {
             EnemyPatrol();
+            isPatrolling = true;
+            isFollowing = false;
+            isMovingToPosition = false;
+            
 
         }
 
         if (isMovingToPosition)
         {
             MoveToPosition(lure.gameObject.transform.position);
+            isFollowing = false;
+            isMovingToWeb = false;
+            isPatrolling = false;
         }
         if (isMovingToWeb)
         {
+
+            isMovingToPosition = false;
             MoveToPosition(web.gameObject.transform.position);
+            
             isPatrolling = false;
-            isFollowing = false;
+            //isFollowing = false;
         }
     
         // animator then selects which animation to play in terms of what bool is selected
@@ -196,6 +204,6 @@ public class Patrol : MonoBehaviour
         isFollowing = false;
         atPlayer = false;
     }
-
    
+
 }
