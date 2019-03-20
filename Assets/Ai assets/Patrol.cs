@@ -26,6 +26,7 @@ public class Patrol : MonoBehaviour
 
     bool playerlastseen = false;
     bool lostPlayer = false;
+    bool atPlayer = false;
 
     // On start make sure the animator idle animation begins then aqquire random spot to move to but don't move until given command
     void Start()
@@ -47,6 +48,8 @@ public class Patrol : MonoBehaviour
         {
             isFollowing = true;
             isPatrolling = false;
+            isMovingToPosition = false;
+            isMovingToWeb = false;
 
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
@@ -65,30 +68,36 @@ public class Patrol : MonoBehaviour
         if (isFollowing)
         {
             FollowPlayer();
-        }
-
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            isFollowing = false;
-            isPatrolling = true;
+            isMovingToWeb = false;
+            isPatrolling = false;
+            isMovingToPosition = false;
         }
 
         if (isPatrolling)
         {
             EnemyPatrol();
+            isPatrolling = true;
+            isFollowing = false;
+            isMovingToPosition = false;
+            
 
         }
 
         if (isMovingToPosition)
         {
             MoveToPosition(lure.gameObject.transform.position);
+            isFollowing = false;
+            isMovingToWeb = false;
+            isPatrolling = false;
         }
         if (isMovingToWeb)
         {
+
+            isMovingToPosition = false;
             MoveToPosition(web.gameObject.transform.position);
+            
             isPatrolling = false;
-            isFollowing = false;
+            //isFollowing = false;
         }
     
         // animator then selects which animation to play in terms of what bool is selected
@@ -153,28 +162,15 @@ public class Patrol : MonoBehaviour
         if (Vector3.Distance(transform.position, target) < 0.2f)
         {
             isMovingToPosition = false;
+            StartCoroutine(WaitBeforePatrol());
         }
-        if (waitTime <= 0)
-        {
-            randomSpot = Random.Range(0, moveSpots.Length);
-            waitTime = startWaitTime;
-
-        }
-        else // minus or equal to time counter begins again once succesful position is met
-        {
-            waitTime -= Time.deltaTime;
-        }
-
-       
-
-
     }
 
 
     void MovetoLastPayerPos()
     {
         waitTime = startWaitTime;
-        StopAllCoroutines();
+        StopCoroutine(MovewithDelay(new Vector3(0,0,0)));
 
         if (!playerlastseen)
         {
@@ -188,23 +184,26 @@ public class Patrol : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, PlayersLastKnownPosition, speed * speedMultiplier * Time.deltaTime);
             transform.LookAt(PlayersLastKnownPosition);
         }
-        if (waitTime <= 0)
+        else if( transform.position == PlayersLastKnownPosition && !atPlayer)
         {
+            atPlayer = true;
+
             isFollowing = false;
-            isPatrolling = true;
+            StartCoroutine(WaitBeforePatrol());
         }
-        else
-        {
-            StartCoroutine(WaitLostPlayer());
-        }
+        
     }
 
-    IEnumerator WaitLostPlayer()
+    IEnumerator WaitBeforePatrol()
     {
         yield return new WaitForSeconds(3.0f);
-        isPatrolling = true;
-        lostPlayer = false;
-       
+
+        isPatrolling = true;        // go back to patrol
+
+        lostPlayer = false;     //all the other bools must be false
+        isFollowing = false;
+        atPlayer = false;
     }
    
+
 }

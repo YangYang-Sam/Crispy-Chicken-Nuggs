@@ -20,6 +20,10 @@ public class Player : MonoBehaviour
     public float ySpeed;
     public float gravity;
     public float jump=15;
+
+    private Patrol patrolScript;
+    [SerializeField]
+    private GameObject spider;
     
 
 
@@ -40,6 +44,15 @@ public class Player : MonoBehaviour
     {
         p = GetComponent<CharacterController>();
         startspeed = speed;
+
+        patrolScript = spider.GetComponent<Patrol>();
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.name == "Web")
+        {
+            patrolScript.isMovingToWeb = true;
+        }
     }
 
     // Update is called once per frame
@@ -99,6 +112,7 @@ public class Player : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.F)&&Time.time>nextsonar)
         {
             sonarClap.Play();
+            sonarClap.pitch = Random.Range(0.75f, 1.25f);
             nextsonar = Time.time + sonarrate;
             sonarcontrol.origin = transform.position;
             SonarFx.Instance.StartSonar(sonarcontrol);
@@ -110,6 +124,7 @@ public class Player : MonoBehaviour
         {
             pause.PauseGame();
         }
+
     }
     
 }
