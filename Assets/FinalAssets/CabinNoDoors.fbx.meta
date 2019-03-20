@@ -1,0 +1,224 @@
+fileFormatVersion: 2
+guid: b188db8d0e760be4289359cbe441ffff
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Bedside_Table
+    100002: Beer_Bottle_1
+    100004: Beer_Bottle_2
+    100006: Cabin
+    100008: //RootNode
+    100010: Chair
+    100012: Coffee_Table
+    100014: Desk
+    100016: Draws
+    100018: Fridge
+    100020: group1
+    100022: group2
+    100024: group3
+    100026: Kitchen_Cabinet_1
+    100028: Kitchen_Cabinet_2
+    100030: Kitchen_Cabinet_3
+    100032: Kitchen_Table
+    100034: Kitchen_Top
+    100036: Oven
+    100038: Parents_Bed
+    100040: Pill_Bottle_1
+    100042: Pill_Bottle_2
+    100044: Pillow
+    100046: Sofa
+    100048: TV
+    400000: Bedside_Table
+    400002: Beer_Bottle_1
+    400004: Beer_Bottle_2
+    400006: Cabin
+    400008: //RootNode
+    400010: Chair
+    400012: Coffee_Table
+    400014: Desk
+    400016: Draws
+    400018: Fridge
+    400020: group1
+    400022: group2
+    400024: group3
+    400026: Kitchen_Cabinet_1
+    400028: Kitchen_Cabinet_2
+    400030: Kitchen_Cabinet_3
+    400032: Kitchen_Table
+    400034: Kitchen_Top
+    400036: Oven
+    400038: Parents_Bed
+    400040: Pill_Bottle_1
+    400042: Pill_Bottle_2
+    400044: Pillow
+    400046: Sofa
+    400048: TV
+    2100000: lambert2
+    2300000: Bedside_Table
+    2300002: Beer_Bottle_1
+    2300004: Beer_Bottle_2
+    2300006: Cabin
+    2300008: Chair
+    2300010: Coffee_Table
+    2300012: Desk
+    2300014: Draws
+    2300016: Fridge
+    2300018: Kitchen_Cabinet_1
+    2300020: Kitchen_Cabinet_2
+    2300022: Kitchen_Cabinet_3
+    2300024: Kitchen_Table
+    2300026: Kitchen_Top
+    2300028: Oven
+    2300030: Parents_Bed
+    2300032: Pill_Bottle_1
+    2300034: Pill_Bottle_2
+    2300036: Pillow
+    2300038: Sofa
+    2300040: TV
+    3300000: Bedside_Table
+    3300002: Beer_Bottle_1
+    3300004: Beer_Bottle_2
+    3300006: Cabin
+    3300008: Chair
+    3300010: Coffee_Table
+    3300012: Desk
+    3300014: Draws
+    3300016: Fridge
+    3300018: Kitchen_Cabinet_1
+    3300020: Kitchen_Cabinet_2
+    3300022: Kitchen_Cabinet_3
+    3300024: Kitchen_Table
+    3300026: Kitchen_Top
+    3300028: Oven
+    3300030: Parents_Bed
+    3300032: Pill_Bottle_1
+    3300034: Pill_Bottle_2
+    3300036: Pillow
+    3300038: Sofa
+    3300040: TV
+    4300000: Cabin
+    4300002: Pillow
+    4300004: Parents_Bed
+    4300006: Draws
+    4300008: Bedside_Table
+    4300010: Kitchen_Table
+    4300012: Chair
+    4300014: Sofa
+    4300016: Beer_Bottle_2
+    4300018: Fridge
+    4300020: Kitchen_Top
+    4300022: Kitchen_Cabinet_2
+    4300024: Kitchen_Cabinet_3
+    4300026: Kitchen_Cabinet_1
+    4300028: Oven
+    4300030: Desk
+    4300032: TV
+    4300034: Coffee_Table
+    4300036: Beer_Bottle_1
+    4300038: Pill_Bottle_2
+    4300040: Pill_Bottle_1
+    6400000: Bedside_Table
+    6400002: Beer_Bottle_1
+    6400004: Beer_Bottle_2
+    6400006: Cabin
+    6400008: Chair
+    6400010: Coffee_Table
+    6400012: Desk
+    6400014: Draws
+    6400016: Fridge
+    6400018: Kitchen_Cabinet_1
+    6400020: Kitchen_Cabinet_2
+    6400022: Kitchen_Cabinet_3
+    6400024: Kitchen_Table
+    6400026: Kitchen_Top
+    6400028: Oven
+    6400030: Parents_Bed
+    6400032: Pill_Bottle_1
+    6400034: Pill_Bottle_2
+    6400036: Pillow
+    6400038: Sofa
+    6400040: TV
+    7400000: Take 001
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
