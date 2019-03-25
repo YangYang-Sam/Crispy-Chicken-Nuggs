@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.9716981, g: 0.9487807, b: 0.9487807, a: 1}
+  m_AmbientSkyColor: {r: 0.084905684, g: 0.08370419, b: 0.08370419, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 0
@@ -3922,11 +3922,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 37f8b339b5baca34aaf5227f04fe2d0c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.84
+      value: -4.59
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 37f8b339b5baca34aaf5227f04fe2d0c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.49
+      value: 0.57
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 37f8b339b5baca34aaf5227f04fe2d0c, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5706,6 +5706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxlight: 1
   frequncy: 40
+  startlight: 0
 --- !u!1 &382153049
 GameObject:
   m_ObjectHideFlags: 0
@@ -6263,12 +6264,12 @@ GameObject:
   - component: {fileID: 407124603}
   - component: {fileID: 407124604}
   m_Layer: 0
-  m_Name: Point Light (8)
+  m_Name: Tree1Light2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &407124603
 Transform:
   m_ObjectHideFlags: 0
@@ -6277,7 +6278,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407124602}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 53.62, y: -35.19, z: -163.78}
+  m_LocalPosition: {x: 54.19, y: -31.6, z: -163.78}
   m_LocalScale: {x: 1.04521, y: 1.04521, z: 1.04521}
   m_Children: []
   m_Father: {fileID: 1602492945}
@@ -6307,7 +6308,7 @@ Light:
     m_NormalBias: 0.4
     m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
+  m_DrawHalo: 1
   m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:
@@ -10913,8 +10914,9 @@ GameObject:
   m_Component:
   - component: {fileID: 738558712}
   - component: {fileID: 738558713}
+  - component: {fileID: 738558714}
   m_Layer: 0
-  m_Name: Point Light (7)
+  m_Name: Tree1Light1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10928,7 +10930,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738558711}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.88, y: -34.7, z: -160.91}
+  m_LocalPosition: {x: 50.86, y: -31.19, z: -164.37}
   m_LocalScale: {x: 1.04521, y: 1.04521, z: 1.04521}
   m_Children: []
   m_Father: {fileID: 1602492945}
@@ -10945,8 +10947,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2
-  m_Range: 10
+  m_Intensity: 1
+  m_Range: 15
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -10958,7 +10960,7 @@ Light:
     m_NormalBias: 0.4
     m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
+  m_DrawHalo: 1
   m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:
@@ -10972,6 +10974,21 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &738558714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738558711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06976d768f2a4540b82b99196c43d31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxlight: 1
+  frequncy: 1
+  startlight: 0.5
 --- !u!1 &742594251
 GameObject:
   m_ObjectHideFlags: 0
@@ -12955,6 +12972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxlight: 0.4
   frequncy: 0.8
+  startlight: 0
 --- !u!1 &843353704
 GameObject:
   m_ObjectHideFlags: 0
@@ -15567,8 +15585,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1025673918}
   - component: {fileID: 1025673917}
+  - component: {fileID: 1025673919}
   m_Layer: 0
-  m_Name: Point Light
+  m_Name: Tree2Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15585,8 +15604,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
-  m_Range: 10
+  m_Intensity: 1
+  m_Range: 15
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -15598,7 +15617,7 @@ Light:
     m_NormalBias: 0.4
     m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
+  m_DrawHalo: 1
   m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:
@@ -15620,12 +15639,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1025673916}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 84.9113, y: -32.78849, z: -107.085785}
+  m_LocalPosition: {x: 85.69, y: -31.26, z: -108.29}
   m_LocalScale: {x: 1.0452104, y: 1.0452101, z: 1.0452101}
   m_Children: []
   m_Father: {fileID: 1602492945}
   m_RootOrder: 84
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1025673919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025673916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06976d768f2a4540b82b99196c43d31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxlight: 0.5
+  frequncy: 0.5
+  startlight: 0.5
 --- !u!1 &1035519530
 GameObject:
   m_ObjectHideFlags: 0
@@ -16041,10 +16075,10 @@ BoxCollider:
   m_GameObject: {fileID: 1062653550}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.160774, y: 2.4333858, z: 6.266284}
-  m_Center: {x: -0.2654047, y: 1.86691, z: -0.53399324}
+  m_Size: {x: 7.160774, y: 2.8396177, z: 6.266284}
+  m_Center: {x: -0.2654047, y: 1.494762, z: -0.53399324}
 --- !u!114 &1062653553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27022,7 +27056,7 @@ GameObject:
   - component: {fileID: 1749853954}
   - component: {fileID: 1749853955}
   m_Layer: 0
-  m_Name: Point Light (9)
+  m_Name: swinglight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28624,6 +28658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxlight: 2
   frequncy: 80
+  startlight: 0
 --- !u!1 &1891339843
 GameObject:
   m_ObjectHideFlags: 0
@@ -30348,6 +30383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxlight: 1
   frequncy: 1
+  startlight: 0.5
 --- !u!1 &2033744541
 GameObject:
   m_ObjectHideFlags: 0
