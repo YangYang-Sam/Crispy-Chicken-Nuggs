@@ -12,11 +12,15 @@ public class OpenDoor : MonoBehaviour
     public Doorswing doorswing;
     public Lightflickering lt;
     bool opening;
+    public AudioSource openDoor;
+    public AudioSource closeSound;
 
     private void OnTriggerStay(Collider other)
     {
         if (Input.GetKeyDown(KeyCode.E) && !opening)
         {
+            openDoor.Play();
+            closeSound.Stop();
             doorswing.enabled = false;
             lt.enabled = false;
             Controldoor();
