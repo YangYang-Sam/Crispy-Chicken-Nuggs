@@ -21,9 +21,9 @@ public class Player : MonoBehaviour
     public float gravity;
     public float jump=15;
 
-    private Patrol patrolScript;
-    [SerializeField]
-    private GameObject spider;
+    //private Patrol patrolScript;
+    //[SerializeField]
+    //private GameObject spider;
     
 
 
@@ -45,17 +45,9 @@ public class Player : MonoBehaviour
         p = GetComponent<CharacterController>();
         startspeed = speed;
 
-        patrolScript = spider.GetComponent<Patrol>();
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.name == "Web")
-        {
-            patrolScript.isMovingToWeb = true;
-        }
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         GetInput();

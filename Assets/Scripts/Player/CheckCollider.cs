@@ -17,7 +17,22 @@ public class CheckCollider : MonoBehaviour
     {
         
     }
- 
+    //player positive touch enenmy and dead
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.CompareTag("Enemey"))
+        {
+            Debug.Log("aaaaaaaah");
+            anim.enabled = true;
+            anim.Play("death");
+            //off player controller
+            p.enabled = false;
+            //open death menu
+            d.isDead = true;
+        }
+    }
+
+    //player negitive touch enenmy and dead
     private void OnCollisionEnter(Collision hit)
     {
         //print(hit.gameObject.name);

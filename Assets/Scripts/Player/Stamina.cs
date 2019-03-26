@@ -15,6 +15,7 @@ public class Stamina : MonoBehaviour
     public CameraShaker cameraShaker;
     public float breathetime = 2.0f;
     public float breathefreq = 8.0f;
+    public bool isRunning;
 
     private Player player;
     //---------------------------------------------------------
@@ -28,7 +29,7 @@ public class Stamina : MonoBehaviour
     }
     private void Update()
     {
-        bool isRunning = Input.GetKey(KeyCode.LeftShift);
+        isRunning = Input.GetKey(KeyCode.LeftShift);
         if (isRunning)
         {
             Staminas = Mathf.Clamp(Staminas - (StaminaDecreasePerFrame * Time.deltaTime), 0.0f, MaxStamina);
