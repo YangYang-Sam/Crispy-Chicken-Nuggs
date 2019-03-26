@@ -21,12 +21,6 @@ public class Player : MonoBehaviour
     public float gravity;
     public float jump=15;
 
-    //private Patrol patrolScript;
-    //[SerializeField]
-    //private GameObject spider;
-    
-
-
     public SonarFxDescriptor sonarcontrol;
     public float sonarrate=2f;
 
@@ -44,7 +38,6 @@ public class Player : MonoBehaviour
     {
         p = GetComponent<CharacterController>();
         startspeed = speed;
-
     }
 
 
