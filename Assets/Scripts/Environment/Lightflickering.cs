@@ -7,6 +7,8 @@ public class Lightflickering : MonoBehaviour
     public float maxlight= 1.0f;
     public float frequncy = 1.0f;
     public float startlight = 0f;
+    public float multiplier = 1f;
+
     new Light light;
 
     void Start()
@@ -16,6 +18,6 @@ public class Lightflickering : MonoBehaviour
 
     void Update()
     {
-        light.intensity = Mathf.PingPong(Time.time* frequncy, maxlight)+startlight;
+        light.intensity = (Mathf.PingPong(Time.time* frequncy, maxlight)+startlight)* multiplier;
     }
 }
