@@ -337,21 +337,22 @@ MonoBehaviour:
   reflections: 1
   indirectBinaural: 1
   indirectMixLevel: 1
-  simulationType: 0
-  uniqueIdentifier: 
+  simulationType: 1
+  uniqueIdentifier: Tap
   avoidSilenceDuringInit: 0
   overrideHRTFIndex: 0
   hrtfIndex: 0
-  bakingRadius: 16
-  useAllProbeBoxes: 0
+  bakingRadius: 5
+  useAllProbeBoxes: 1
   probeBoxes: []
-  bakedProbeNames: []
-  bakedProbeDataSizes: 
+  bakedProbeNames:
+  - Ambulance reverb box
+  bakedProbeDataSizes: 00000000
   bakedDataSize: 0
   bakedStatsFoldout: 0
-  bakeToggle: 0
+  bakeToggle: 1
   bakedDataIdentifier:
-    identifier: 0
+    identifier: 607113075
     type: 0
 --- !u!82 &5026138
 AudioSource:
@@ -374,7 +375,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1.2446413
-  MaxDistance: 500
+  MaxDistance: 8.464386
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 1
@@ -1316,8 +1317,8 @@ MonoBehaviour:
   interpolation: 1
   physicsBasedAttenuation: 1
   airAbsorption: 1
-  dipoleWeight: 0.011
-  dipolePower: 0.03
+  dipoleWeight: 0.578
+  dipolePower: 1.16
   occlusionMode: 2
   occlusionMethod: 0
   sourceRadius: 1
@@ -1325,21 +1326,22 @@ MonoBehaviour:
   reflections: 1
   indirectBinaural: 1
   indirectMixLevel: 1.01
-  simulationType: 0
-  uniqueIdentifier: 
+  simulationType: 1
+  uniqueIdentifier: Ambulance
   avoidSilenceDuringInit: 0
   overrideHRTFIndex: 0
   hrtfIndex: 0
   bakingRadius: 16
-  useAllProbeBoxes: 0
+  useAllProbeBoxes: 1
   probeBoxes: []
-  bakedProbeNames: []
-  bakedProbeDataSizes: 
-  bakedDataSize: 0
-  bakedStatsFoldout: 0
-  bakeToggle: 0
+  bakedProbeNames:
+  - Ambulance reverb box
+  bakedProbeDataSizes: d6600600
+  bakedDataSize: 418006
+  bakedStatsFoldout: 1
+  bakeToggle: 1
   bakedDataIdentifier:
-    identifier: 0
+    identifier: 1055159760
     type: 0
 --- !u!82 &113529961
 AudioSource:
@@ -1362,7 +1364,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 2.0289345
-  MaxDistance: 500
+  MaxDistance: 20.075378
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 1
@@ -8862,7 +8864,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 7.4233856
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 1
@@ -10626,13 +10628,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d599a015141b47a4d10676f2dac29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useAllProbeBoxes: 0
+  useAllProbeBoxes: 1
   probeBoxes: []
-  bakedProbeNames: []
-  bakedProbeDataSizes: 
-  bakedDataSize: 0
+  bakedProbeNames:
+  - Ambulance reverb box
+  bakedProbeDataSizes: 24990600
+  bakedDataSize: 432420
   bakedStatsFoldout: 0
-  bakeToggle: 0
+  bakeToggle: 1
   currentStaticListenerNode: {fileID: 0}
 --- !u!1 &653474672
 GameObject:
@@ -13110,6 +13113,8 @@ GameObject:
   - component: {fileID: 809793955}
   - component: {fileID: 809793954}
   - component: {fileID: 809793953}
+  - component: {fileID: 809793957}
+  - component: {fileID: 809793956}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -13178,6 +13183,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &809793956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809793952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43300f764e354d642abf0f0dbb612011, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Preset: 0
+  Value:
+    LowFreqAbsorption: 0.1
+    MidFreqAbsorption: 0.2
+    HighFreqAbsorption: 0.3
+    Scattering: 0.05
+    LowFreqTransmission: 0.1
+    MidFreqTransmission: 0.05
+    HighFreqTransmission: 0.03
+--- !u!114 &809793957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809793952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79e99846fd75c4438917229c144155a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TerrainSimplificationLevel: 5
+  exportAllChildren: 0
 --- !u!1 &812904724
 GameObject:
   m_ObjectHideFlags: 0
@@ -16594,7 +16634,7 @@ MonoBehaviour:
   updateComponents: 1
   currentAudioListener: {fileID: 0}
   showLoadTimeOptions: 0
-  showMassBakingOptions: 0
+  showMassBakingOptions: 1
   layerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -16836,22 +16876,23 @@ MonoBehaviour:
   directMixLevel: 1
   reflections: 1
   indirectBinaural: 1
-  indirectMixLevel: 1
-  simulationType: 0
-  uniqueIdentifier: 
+  indirectMixLevel: 0.59
+  simulationType: 1
+  uniqueIdentifier: Clock
   avoidSilenceDuringInit: 0
   overrideHRTFIndex: 0
   hrtfIndex: 0
   bakingRadius: 16
-  useAllProbeBoxes: 0
+  useAllProbeBoxes: 1
   probeBoxes: []
-  bakedProbeNames: []
-  bakedProbeDataSizes: 
+  bakedProbeNames:
+  - Ambulance reverb box
+  bakedProbeDataSizes: 00000000
   bakedDataSize: 0
   bakedStatsFoldout: 0
-  bakeToggle: 0
+  bakeToggle: 1
   bakedDataIdentifier:
-    identifier: 0
+    identifier: -1366120296
     type: 0
 --- !u!82 &1050413041
 AudioSource:
@@ -16874,7 +16915,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 5.374756
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 1
@@ -19839,6 +19880,7 @@ Transform:
   - {fileID: 1050413042}
   - {fileID: 547663264}
   - {fileID: 2106106774}
+  - {fileID: 1775161692}
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23760,6 +23802,188 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432417043}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1442720880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1442720882}
+  - component: {fileID: 1442720881}
+  m_Layer: 0
+  m_Name: Ambulance reverb box
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1442720881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442720880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ea38fb6afe48f4d8a095ea13565fa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placementStrategy: 2
+  horizontalSpacing: 5
+  heightAboveFloor: 1.5
+  maxNumTriangles: 64
+  maxOctreeDepth: 2
+  dataSize: 851502
+  probeSpherePoints:
+  - 60.04
+  - 1.9966755
+  - -442.51
+  - 60.04
+  - 2.108508
+  - -437.51
+  - 60.04
+  - 2.0523524
+  - -432.51
+  - 60.04
+  - 1.9542971
+  - -427.51
+  - 60.04
+  - 1.8562412
+  - -422.51
+  - 60.04
+  - 1.7581859
+  - -417.51
+  - 65.04
+  - 1.9444742
+  - -442.51
+  - 65.04
+  - 2.0425296
+  - -437.51
+  - 65.04
+  - 2.030517
+  - -432.51
+  - 65.04
+  - 1.9324617
+  - -427.51
+  - 65.04
+  - 1.8344064
+  - -422.51
+  - 65.04
+  - 1.736351
+  - -417.51
+  - 70.04
+  - 1.8464189
+  - -442.51
+  - 70.04
+  - 1.9444742
+  - -437.51
+  - 70.04
+  - 1.9613948
+  - -432.51
+  - 70.04
+  - 5.0776863
+  - -427.51
+  - 70.04
+  - 1.9324617
+  - -427.51
+  - 70.04
+  - 1.8344064
+  - -422.51
+  - 70.04
+  - 1.736351
+  - -417.51
+  - 75.04
+  - 6.671734
+  - -442.51
+  - 75.04
+  - 1.748363
+  - -442.51
+  - 75.04
+  - 6.671732
+  - -437.51
+  - 75.04
+  - 1.8464189
+  - -437.51
+  - 75.04
+  - 6.671731
+  - -432.51
+  - 75.04
+  - 1.8633394
+  - -432.51
+  - 75.04
+  - 6.6717305
+  - -427.51
+  - 75.04
+  - 1.8633394
+  - -427.51
+  - 75.04
+  - 6.67173
+  - -422.51
+  - 75.04
+  - 1.8344064
+  - -422.51
+  - 75.04
+  - 1.736351
+  - -417.51
+  probeSphereRadii:
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  dataLayerInfo:
+  - name: reverb
+    identifier:
+      identifier: 0
+      type: 2
+    size: 432420
+  - name: Ambulance
+    identifier:
+      identifier: 1055159760
+      type: 0
+    size: 418006
+--- !u!4 &1442720882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442720880}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 67.54, y: 3.54, z: 430.01}
+  m_LocalScale: {x: 17.179293, y: 7.371564, z: 26.339071}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1445452816
 GameObject:
   m_ObjectHideFlags: 0
@@ -24897,21 +25121,22 @@ MonoBehaviour:
   reflections: 1
   indirectBinaural: 1
   indirectMixLevel: 1
-  simulationType: 0
-  uniqueIdentifier: 
+  simulationType: 1
+  uniqueIdentifier: T.V
   avoidSilenceDuringInit: 0
   overrideHRTFIndex: 0
   hrtfIndex: 0
   bakingRadius: 16
-  useAllProbeBoxes: 0
+  useAllProbeBoxes: 1
   probeBoxes: []
-  bakedProbeNames: []
-  bakedProbeDataSizes: 
+  bakedProbeNames:
+  - Ambulance reverb box
+  bakedProbeDataSizes: 00000000
   bakedDataSize: 0
   bakedStatsFoldout: 0
-  bakeToggle: 0
+  bakeToggle: 1
   bakedDataIdentifier:
-    identifier: 0
+    identifier: -2136952027
     type: 0
 --- !u!82 &1521898098
 AudioSource:
@@ -24934,7 +25159,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 10
+  MaxDistance: 6.799103
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 1
@@ -28223,6 +28448,175 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1775161691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1775161692}
+  - component: {fileID: 1775161694}
+  - component: {fileID: 1775161693}
+  m_Layer: 0
+  m_Name: Ambience one
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1775161692
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775161691}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -191.26, y: 652.3, z: 668.11}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1257937860}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1775161693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775161691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cc64aca77a4bc84f9a15ccd92d26878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directBinaural: 1
+  interpolation: 1
+  physicsBasedAttenuation: 1
+  airAbsorption: 1
+  dipoleWeight: 0
+  dipolePower: 0
+  occlusionMode: 3
+  occlusionMethod: 0
+  sourceRadius: 1
+  directMixLevel: 1
+  reflections: 1
+  indirectBinaural: 1
+  indirectMixLevel: 1
+  simulationType: 0
+  uniqueIdentifier: 
+  avoidSilenceDuringInit: 0
+  overrideHRTFIndex: 0
+  hrtfIndex: 0
+  bakingRadius: 16
+  useAllProbeBoxes: 0
+  probeBoxes: []
+  bakedProbeNames: []
+  bakedProbeDataSizes: 
+  bakedDataSize: 0
+  bakedStatsFoldout: 0
+  bakeToggle: 0
+  bakedDataIdentifier:
+    identifier: 0
+    type: 0
+--- !u!82 &1775161694
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775161691}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 55e819a7b354a7347817dae0b2903d67, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.306
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 1
+  SpatializePostEffects: 1
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 1
+  BypassListenerEffects: 1
+  BypassReverbZones: 1
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1780680152
 GameObject:
   m_ObjectHideFlags: 0
@@ -33006,7 +33400,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 12.03833
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 1
