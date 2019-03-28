@@ -1379,6 +1379,11 @@ MonoBehaviour:
   angle: 20
   swingfreq: 20
   pivot: {fileID: 132417470}
+  x: 0
+  y: 1
+  z: 0
+  startposition: 20
+  clockwise: 0
 --- !u!1 &135455077
 GameObject:
   m_ObjectHideFlags: 0
@@ -8347,6 +8352,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60107cfd6a5a93b4983f028e8e2594fa, type: 3}
+--- !u!1 &602617481 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100014, guid: 60107cfd6a5a93b4983f028e8e2594fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 602617479}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &602617482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602617481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a67f789dd8387a64a92a6f0f972c1121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angle: 90
+  swingfreq: 90
+  pivot: {fileID: 0}
+  x: 0
+  y: 0
+  z: 1
+  startposition: -45
+  clockwise: 1
 --- !u!1 &604210522
 GameObject:
   m_ObjectHideFlags: 0
@@ -19082,6 +19113,32 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230377579}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1239233854 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100014, guid: 60107cfd6a5a93b4983f028e8e2594fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 1273776934}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1239233856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239233854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a67f789dd8387a64a92a6f0f972c1121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angle: 30
+  swingfreq: 15
+  pivot: {fileID: 0}
+  x: 0
+  y: 0
+  z: 1
+  startposition: 15
+  clockwise: 0
 --- !u!1 &1244209874
 GameObject:
   m_ObjectHideFlags: 0
@@ -27731,6 +27788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1749853954}
   - component: {fileID: 1749853955}
+  - component: {fileID: 1749853956}
   m_Layer: 0
   m_Name: swinglight
   m_TagString: Untagged
@@ -27746,7 +27804,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749853953}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 67.64, y: -37.11, z: -203.25}
+  m_LocalPosition: {x: 67.64, y: -36.05, z: -202.07}
   m_LocalScale: {x: 1.04521, y: 1.04521, z: 1.04521}
   m_Children: []
   m_Father: {fileID: 1602492945}
@@ -27790,6 +27848,22 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1749853956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749853953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06976d768f2a4540b82b99196c43d31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxlight: 1
+  frequncy: 2
+  startlight: 1
+  multiplier: 1
 --- !u!1 &1773420592
 GameObject:
   m_ObjectHideFlags: 0
