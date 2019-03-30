@@ -516,6 +516,27 @@ Transform:
   m_Father: {fileID: 600384981}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &499221479 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8022409148860308935, guid: 0692e2a54887c3b4f8d4e283737a8e00,
+    type: 3}
+  m_PrefabInstance: {fileID: 8022409149535072271}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &499221488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499221479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac409f1a2bab14459e795482bc4278b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  speedup: 2
+  startspeed: 0
 --- !u!1 &521607434
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,7 +2431,7 @@ MonoBehaviour:
   maxlight: 1
   frequncy: 1
   startlight: 0
-  multiplyer: 1
+  multiplier: 1
 --- !u!114 &1958165235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2423,8 +2444,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a27fb8058fae15c42984e257f297a8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  a: 20
-  b: 5
+  startRange: 0
+  fullRange: 0
 --- !u!1 &2035518120 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100048, guid: f5a9bd478ca094495a4520e37f57420d,
@@ -2662,15 +2683,15 @@ PrefabInstance:
       propertyPath: sonarClap
       value: 
       objectReference: {fileID: 992567461}
-    - target: {fileID: 564717858, guid: 0692e2a54887c3b4f8d4e283737a8e00, type: 3}
-      propertyPath: d
-      value: 
-      objectReference: {fileID: 679598772}
-    - target: {fileID: 8022409148860308933, guid: 0692e2a54887c3b4f8d4e283737a8e00,
+    - target: {fileID: 8022409148860308932, guid: 0692e2a54887c3b4f8d4e283737a8e00,
         type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 564717858, guid: 0692e2a54887c3b4f8d4e283737a8e00, type: 3}
+      propertyPath: d
+      value: 
+      objectReference: {fileID: 679598772}
     - target: {fileID: 2324351611521150615, guid: 0692e2a54887c3b4f8d4e283737a8e00,
         type: 3}
       propertyPath: sonarcontrol.mode
@@ -2729,6 +2750,11 @@ PrefabInstance:
     - target: {fileID: 2324351611521150615, guid: 0692e2a54887c3b4f8d4e283737a8e00,
         type: 3}
       propertyPath: sonarrate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022409148860308933, guid: 0692e2a54887c3b4f8d4e283737a8e00,
+        type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8022409149190616783, guid: 0692e2a54887c3b4f8d4e283737a8e00,

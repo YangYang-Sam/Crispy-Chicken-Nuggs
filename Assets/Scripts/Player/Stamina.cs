@@ -17,14 +17,14 @@ public class Stamina : MonoBehaviour
     public float breathefreq = 8.0f;
     public bool isRunning;
 
-    private Player player;
+    private PlayerMove player;
     //---------------------------------------------------------
     private float StaminaRegenTimer = 0.0f;
     //---------------------------------------------------------
 
     private void Start()
     {
-        player=GetComponent<Player>();
+        player=GetComponent<PlayerMove>();
         //Debug.Log(player.Print());
     }
     private void Update()

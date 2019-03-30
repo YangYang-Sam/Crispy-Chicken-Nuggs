@@ -8,6 +8,8 @@ TagManager:
   - Web
   - Lure
   - Movespot
+  - Laddor
+  - LaddorTop
   layers:
   - Default
   - TransparentFX
