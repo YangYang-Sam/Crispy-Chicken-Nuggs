@@ -5,9 +5,7 @@ using UnityEngine;
 public class ClimbLaddor : MonoBehaviour
 {
     private CharacterController p;
-    Transform ChController;
-    public bool isClimbingUp = false;
-    public bool isClimbingDown = false;
+    public bool isClimbing = false;
     public float climbSpeed = 5f;
 
     private PlayerMove pm;
@@ -23,57 +21,49 @@ public class ClimbLaddor : MonoBehaviour
 
     void Update()
     {
-        if (isClimbingUp)
+        if (isClimbing)
         {
             xInput = Input.GetAxis("Horizontal") *climbSpeed;
             yInput = Input.GetAxis("Vertical") * climbSpeed;
 
-            Vector3 move = new Vector3(xInput, yInput,0);
+            Vector3 move = new Vector3(0, yInput,0);
             move = Vector3.ClampMagnitude(move, climbSpeed);
             move = transform.TransformVector(move);
 
             p.Move(move * Time.deltaTime);
         }
 
-        if (isClimbingDown)
-        {
-            xInput = Input.GetAxis("Horizontal") * climbSpeed;
-            yInput = Input.GetAxis("Vertical") * climbSpeed;
-
-            Vector3 move = new Vector3(yInput, xInput, 0);
-            move = Vector3.ClampMagnitude(move, climbSpeed);
-            move = transform.TransformVector(move);
-
-            p.Move(move * Time.deltaTime);
-        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Laddor"&&isClimbingDown==false&&isClimbingUp==false)
+        if (other.gameObject.tag == "Laddor")
         {
-            pm.enabled = false;
-            isClimbingUp = true;
+            if (!isClimbing)
+            {
+                pm.enabled = false;
+                isClimbing = true;
+            }
+            else
+            {
+                pm.enabled = true;
+                isClimbing = false;
+            }
         }
 
-        if (other.gameObject.tag == "LaddorTop" && isClimbingDown == false && isClimbingUp == false)
+        if (other.gameObject.tag == "LaddorTop" && isClimbing)
         {
-            pm.enabled = false;
-            isClimbingDown = true;
+            pm.enabled = true;
+            isClimbing = false;
         }
 
-        if (other.gameObject.tag == "LaddorTop" && isClimbingDown == true)
-        {
-            pm.enabled = true;
-            isClimbingDown = false;
-        }
     }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "LaddorTop" && isClimbingUp ==true&&isClimbingDown==false)
-        {
-            pm.enabled = true;
-            isClimbingUp = false;
-        }
-    }
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.gameObject.tag == "Laddor")
+    //    {
+    //        pm.enabled = true;
+    //        isClimbing = false;
+    //    }
+    //}
 }

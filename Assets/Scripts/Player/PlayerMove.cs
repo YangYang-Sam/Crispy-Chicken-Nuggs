@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     private CharacterController p;
+    private Player g;
 
     //member input values
     private float xInput;
@@ -19,6 +20,7 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         p = GetComponent<CharacterController>();
+        g = GetComponent<Player>();
         startspeed = speed;
     }
 
@@ -43,7 +45,7 @@ public class PlayerMove : MonoBehaviour
         move = Vector3.ClampMagnitude(move, speed);
         move = transform.TransformVector(move);
 
-        p.Move(move * Time.deltaTime);
+        p.Move((move + new Vector3(0, g.ySpeed, 0)) * Time.deltaTime);
     }
 
 }

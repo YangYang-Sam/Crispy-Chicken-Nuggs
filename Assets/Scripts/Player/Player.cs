@@ -15,8 +15,8 @@ public class Player : MonoBehaviour
 
     //grivaty
     public float ySpeed;
-    public float gravity=-15;
-    public float jump = 15;
+    public float gravity=-15f;
+    public float jump =10f;
 
     public SonarFxDescriptor sonarcontrol;
     public float sonarrate=2f;
@@ -63,13 +63,14 @@ public class Player : MonoBehaviour
         Quaternion CamRotation = Quaternion.Euler(pitch, 0, 0);
         fpsCam.localRotation = CamRotation;
 
+        //grivaty
         if (p.isGrounded)
         {
-            if (Input.GetButtonDown("Jump"))
-            {
-                ySpeed = jump;
-            }
-            else
+            //if (Input.GetButtonDown("Jump"))
+            //{
+            //    ySpeed = jump;
+            //}
+            //else
             {
                 ySpeed = gravity * Time.deltaTime;
             }
