@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 2026162586}
   - component: {fileID: 2324351611521150615}
   - component: {fileID: 1227949440}
+  - component: {fileID: 1227949449}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -143,6 +144,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonarClap: {fileID: 0}
+  ySpeed: 0
+  gravity: -15
+  jump: 10
   sonarcontrol:
     mode: 1
     duration: 2
@@ -186,6 +190,7 @@ MonoBehaviour:
   fpsCam: {fileID: 8022409149507689054}
   mSpeed: 15
   pitchRange: 45
+  UEye: {fileID: 0}
 --- !u!114 &8022409148860308931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,6 +327,20 @@ MonoBehaviour:
   speed: 5
   speedup: 2
   startspeed: 0
+--- !u!114 &1227949449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8022409148860308935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da8efdb00fe42d14fabcffaebcb692b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isClimbing: 0
+  climbSpeed: 5
 --- !u!1 &8022409149190616752
 GameObject:
   m_ObjectHideFlags: 0
