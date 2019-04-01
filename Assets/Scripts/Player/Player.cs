@@ -30,7 +30,9 @@ public class Player : MonoBehaviour
     [Range(45, 85)]
     public float pitchRange=45f;
 
-    // Start is called before the first frame update
+    [SerializeField] private GameObject UEye;
+    bool UEyeOn;
+
     void Start()
     {
         p = GetComponent<CharacterController>();
@@ -41,7 +43,26 @@ public class Player : MonoBehaviour
     {
         GetInput();
         Updatemovement();
+        UEyeUpdate();
+    }
 
+    private void UEyeUpdate()
+    {
+
+        if (!UEyeOn)
+        {
+            UEye.SetActive(false);
+        }
+        else
+        {
+            UEye.SetActive(true);
+
+            if (Time.time > nextsonar)
+            {
+                UEyeOn = false;
+
+            }
+        }
     }
 
     void GetInput()
@@ -85,6 +106,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F)&&Time.time>nextsonar)
         {
             sonarClap.Play();
+            UEyeOn = true;
             sonarClap.pitch = Random.Range(0.75f, 1.25f);
             nextsonar = Time.time + sonarrate;
             sonarcontrol.origin = transform.position;
