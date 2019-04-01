@@ -7,19 +7,16 @@ public class Player : MonoBehaviour
     private CharacterController p;
     private float pitch;
     //member input values
-    private float xInput;
-    private float zInput;
+
     private float xMouse;
     private float yMouse;
     private float nextsonar;
     public AudioSource sonarClap;
-    public float speed;
-    public float speedup;
-    public float startspeed;
+
     //grivaty
     public float ySpeed;
-    public float gravity;
-    public float jump=15;
+    public float gravity=-15f;
+    public float jump =10f;
 
     public SonarFxDescriptor sonarcontrol;
     public float sonarrate=2f;
@@ -28,16 +25,15 @@ public class Player : MonoBehaviour
 
     public Transform fpsCam;
     [Range(5,15)]
-    public float mSpeed=10f;
+    public float mSpeed=15f;
 
     [Range(45, 85)]
-    public float pitchRange;
+    public float pitchRange=45f;
 
     // Start is called before the first frame update
     void Start()
     {
         p = GetComponent<CharacterController>();
-        startspeed = speed;
     }
 
 
@@ -50,8 +46,6 @@ public class Player : MonoBehaviour
 
     void GetInput()
     {
-        xInput = Input.GetAxis("Horizontal") * speed;
-        zInput = Input.GetAxis("Vertical") * speed;
         xMouse = Input.GetAxis("Mouse X") * mSpeed;
         yMouse = Input.GetAxis("Mouse Y") * mSpeed;
 
@@ -59,29 +53,6 @@ public class Player : MonoBehaviour
 
     void Updatemovement()
     {
-        //make movement face to view
-        Vector3 move = new Vector3(xInput, 0, zInput);
-        move = Vector3.ClampMagnitude(move, speed);
-        move = transform.TransformVector(move);
-
-        //jump
-        if (p.isGrounded)
-        {
-            if (Input.GetButtonDown("Jump"))
-            {
-                ySpeed = jump;
-            }
-            else
-            {
-                ySpeed = gravity * Time.deltaTime;
-            }
-        }
-        else
-        {
-            ySpeed += gravity * Time.deltaTime;
-        }
-        p.Move((move + new Vector3(0, ySpeed, 0)) * Time.deltaTime);
-
         //mouse control view
 
         xMouse *= Time.deltaTime * 20;
@@ -92,9 +63,26 @@ public class Player : MonoBehaviour
         Quaternion CamRotation = Quaternion.Euler(pitch, 0, 0);
         fpsCam.localRotation = CamRotation;
 
+        //grivaty
+        if (p.isGrounded)
+        {
+            //if (Input.GetButtonDown("Jump"))
+            //{
+            //    ySpeed = jump;
+            //}
+            //else
+            {
+                ySpeed = gravity * Time.deltaTime;
+            }
+        }
+        else
+        {
+            ySpeed += gravity * Time.deltaTime;
+        }
+
         //controlsonar
 
-        if(Input.GetKeyDown(KeyCode.F)&&Time.time>nextsonar)
+        if (Input.GetKeyDown(KeyCode.F)&&Time.time>nextsonar)
         {
             sonarClap.Play();
             sonarClap.pitch = Random.Range(0.75f, 1.25f);
