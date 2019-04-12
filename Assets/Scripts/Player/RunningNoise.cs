@@ -11,12 +11,12 @@ public class RunningNoise : MonoBehaviour
     private float nextsonar;
     private Vector3 old;
     private Stamina s;
-    private ChasingLure runningsound;
+    private ChasingLure[] runningsound;
 
     void Start()
     {
         s=GetComponent<Stamina>();
-        runningsound = FindObjectOfType<ChasingLure>();
+        runningsound = FindObjectsOfType<ChasingLure>();
     }
 
     void Update()
@@ -25,7 +25,10 @@ public class RunningNoise : MonoBehaviour
         {
             //spider located
             target.position = transform.position;
-            runningsound.UpdateTarget(target);
+            foreach (var r in runningsound)
+            {
+                r.UpdateTarget(target);
+            }
             //running wave
             sonarrate = 0.5f;
             sonarcontrol.duration = 2f;

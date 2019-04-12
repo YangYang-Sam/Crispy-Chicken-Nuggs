@@ -5,7 +5,7 @@ using UnityEngine;
 public class Hearding : MonoBehaviour
 {
     public GameObject wave;
-    private ChasingLure luresound;
+    private ChasingLure[] luresound;
     public ChasingTarget target;
 
     float timer = 1;
@@ -13,7 +13,7 @@ public class Hearding : MonoBehaviour
 
     void Start()
     {
-        luresound = FindObjectOfType<ChasingLure>();
+        luresound = FindObjectsOfType<ChasingLure>();
         //lure = GameObject.FindGameObjectWithTag("Lure");
     }
 
@@ -34,7 +34,11 @@ public class Hearding : MonoBehaviour
         var p = Instantiate(wave, transform.position, transform.rotation);
 
         target.position = p.transform.position;
-        luresound.UpdateTarget(target);
+        foreach (var l in luresound)
+        {
+            l.UpdateTarget(target);
+        }
+        
         //isChasing.range = 5f;
         //lure.transform.position = p.transform.position;
         timer = 1;
