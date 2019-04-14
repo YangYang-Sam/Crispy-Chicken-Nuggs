@@ -47,7 +47,7 @@ public class RunningNoise : MonoBehaviour
         else
         {
             sonarrate = 1f;
-            sonarcontrol.duration = 1f;
+            sonarcontrol.duration = 1.5f;
             sonarcontrol.waveAmplitude = 0.5f;
             sonarcontrol.waveExponent = 1000f;
             sonarcontrol.waveSpeed = 10f;

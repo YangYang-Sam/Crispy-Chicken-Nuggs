@@ -1,22 +1,32 @@
 fileFormatVersion: 2
-guid: 710f6041fa8faff4f9daae13060f5732
+guid: 9f9967ab8c57f2345992a5c7e12fab8b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: pasted__pPlane8
-    100002: //RootNode
-    400000: pasted__pPlane8
-    400002: //RootNode
-    2100000: CliffOneSided
-    2300000: pasted__pPlane8
-    3300000: pasted__pPlane8
-    4300000: pasted__pPlane8
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CliffOneSided
-    second: {fileID: 2100000, guid: 450e508714556404cb86ae538f819afe, type: 2}
+    100000: //RootNode
+    100002: pCube1
+    100004: Poll
+    100006: Snake_1
+    100008: Snake_2
+    400000: //RootNode
+    400002: pCube1
+    400004: Poll
+    400006: Snake_1
+    400008: Snake_2
+    2100000: lambert1
+    2300000: pCube1
+    2300002: Poll
+    2300004: Snake_1
+    2300006: Snake_2
+    3300000: pCube1
+    3300002: Poll
+    3300004: Snake_1
+    3300006: Snake_2
+    4300000: Snake_1
+    4300002: Poll
+    4300004: Snake_2
+    4300006: pCube1
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -75,7 +85,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   importAnimation: 1

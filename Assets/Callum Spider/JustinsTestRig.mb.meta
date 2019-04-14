@@ -3,6 +3,131 @@ guid: 92623475ca5958943be26d030940d673
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
+    100000: finalmesh01:eye_low_eye_low
+    100002: finalmesh01:spider_low_spider_low
+    100004: ikHandle1
+    100006: ikHandle2
+    100008: ikHandle3
+    100010: ikHandle4
+    100012: ikHandle5
+    100014: ikHandle6
+    100016: ikHandle7
+    100018: ikHandle8
+    100020: joint1
+    100022: joint10
+    100024: joint11
+    100026: joint12
+    100028: joint13
+    100030: joint14
+    100032: joint15
+    100034: joint16
+    100036: joint17
+    100038: joint18
+    100040: joint19
+    100042: joint2
+    100044: joint20
+    100046: joint21
+    100048: joint22
+    100050: joint23
+    100052: joint24
+    100054: joint25
+    100056: joint26
+    100058: joint27
+    100060: joint28
+    100062: joint29
+    100064: joint3
+    100066: joint30
+    100068: joint31
+    100070: joint32
+    100072: joint33
+    100074: joint34
+    100076: joint35
+    100078: joint36
+    100080: joint37
+    100082: joint38
+    100084: joint39
+    100086: joint4
+    100088: joint4 1
+    100090: joint4 2
+    100092: joint4 3
+    100094: joint5
+    100096: joint5 1
+    100098: joint5 2
+    100100: joint5 3
+    100102: joint6
+    100104: joint6 1
+    100106: joint6 2
+    100108: joint6 3
+    100110: joint7
+    100112: joint8
+    100114: joint9
+    100116: //RootNode
+    400000: finalmesh01:eye_low_eye_low
+    400002: finalmesh01:spider_low_spider_low
+    400004: ikHandle1
+    400006: ikHandle2
+    400008: ikHandle3
+    400010: ikHandle4
+    400012: ikHandle5
+    400014: ikHandle6
+    400016: ikHandle7
+    400018: ikHandle8
+    400020: joint1
+    400022: joint10
+    400024: joint11
+    400026: joint12
+    400028: joint13
+    400030: joint14
+    400032: joint15
+    400034: joint16
+    400036: joint17
+    400038: joint18
+    400040: joint19
+    400042: joint2
+    400044: joint20
+    400046: joint21
+    400048: joint22
+    400050: joint23
+    400052: joint24
+    400054: joint25
+    400056: joint26
+    400058: joint27
+    400060: joint28
+    400062: joint29
+    400064: joint3
+    400066: joint30
+    400068: joint31
+    400070: joint32
+    400072: joint33
+    400074: joint34
+    400076: joint35
+    400078: joint36
+    400080: joint37
+    400082: joint38
+    400084: joint39
+    400086: joint4
+    400088: joint4 1
+    400090: joint4 2
+    400092: joint4 3
+    400094: joint5
+    400096: joint5 1
+    400098: joint5 2
+    400100: joint5 3
+    400102: joint6
+    400104: joint6 1
+    400106: joint6 2
+    400108: joint6 3
+    400110: joint7
+    400112: joint8
+    400114: joint9
+    400116: //RootNode
+    2100000: finalmesh01_spider_mastermaterial1
+    2300000: finalmesh01:eye_low_eye_low
+    3300000: finalmesh01:eye_low_eye_low
+    4300000: finalmesh01:spider_low_spider_low
+    4300002: finalmesh01:eye_low_eye_low
+    9500000: //RootNode
+    13700000: finalmesh01:spider_low_spider_low
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -57,7 +182,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
