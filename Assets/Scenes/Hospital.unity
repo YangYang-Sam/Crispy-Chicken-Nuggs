@@ -428,16 +428,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6516544939638132855, guid: aeab9c81bc5c8794c9d6d4a21cde877f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6516544940179180806, guid: aeab9c81bc5c8794c9d6d4a21cde877f,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7399470415673114537, guid: aeab9c81bc5c8794c9d6d4a21cde877f,
         type: 3}
       propertyPath: m_Name
@@ -547,6 +537,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516544939638132855, guid: aeab9c81bc5c8794c9d6d4a21cde877f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516544940179180806, guid: aeab9c81bc5c8794c9d6d4a21cde877f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1385931036, guid: aeab9c81bc5c8794c9d6d4a21cde877f, type: 3}
       propertyPath: m_IsActive
@@ -845,6 +845,21 @@ PrefabInstance:
       propertyPath: d
       value: 
       objectReference: {fileID: 884560784}
+    - target: {fileID: 8022409149507689054, guid: 0692e2a54887c3b4f8d4e283737a8e00,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.39465907
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022409149507689054, guid: 0692e2a54887c3b4f8d4e283737a8e00,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.91882765
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022409149507689054, guid: 0692e2a54887c3b4f8d4e283737a8e00,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -46.489002
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0692e2a54887c3b4f8d4e283737a8e00, type: 3}
 --- !u!1 &1143819497 stripped
@@ -860,7 +875,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143819497}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
