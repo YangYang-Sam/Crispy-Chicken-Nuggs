@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class TitleMenu : MonoBehaviour
 {
     public string newGamescene;
+    public GameObject fade;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +27,10 @@ public class TitleMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void Fade()
+    {
+        fade.SetActive(true);
     }
 }

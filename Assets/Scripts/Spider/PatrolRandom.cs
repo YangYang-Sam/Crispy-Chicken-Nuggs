@@ -13,6 +13,7 @@ public class PatrolRandom : MonoBehaviour
     private int randomSpot;
     private float waitTime;
     private NavMeshAgent agent;
+    private Animator anim;
 
     void Start()
     {
@@ -20,6 +21,7 @@ public class PatrolRandom : MonoBehaviour
         randomSpot = Random.Range(0, moveSpots.Length);
         agent = GetComponent<NavMeshAgent>();
         isChasing = GetComponent<ChasingLure>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -38,6 +40,7 @@ public class PatrolRandom : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, agent.path.corners[1], speed * Time.deltaTime);
             transform.LookAt(agent.path.corners[1]);
+            anim.SetFloat("Move", 1);
         }
         //If cube comes into contact of a distance of 0.2 of the position wait
         if (Vector3.Distance(transform.position, moveSpots[randomSpot].position) < 1f)

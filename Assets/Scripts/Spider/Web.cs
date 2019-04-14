@@ -5,12 +5,13 @@ using UnityEngine;
 public class Web : MonoBehaviour
 {
     //private GameObject lure;
-    private ChasingLure websound;
+    private ChasingLure[] websound;
     public ChasingTarget target;
 
     private void Start()
     {
-        websound=FindObjectOfType<ChasingLure>();
+        websound=FindObjectsOfType<ChasingLure>();
+        
         //lure = GameObject.FindGameObjectWithTag("Lure");
     }
 
@@ -22,7 +23,10 @@ public class Web : MonoBehaviour
             //lure.transform.position=transform.position;
 
             target.position = transform.position;
-            websound.UpdateTarget(target);
+            foreach (var w in websound)
+            {
+                w.UpdateTarget(target);
+            }
         }
     }
 }

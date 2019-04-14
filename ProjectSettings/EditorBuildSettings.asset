@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NewMap.unity
     guid: 4c8ea36dca897074aab9501a6e4a1131
+  - enabled: 1
+    path: Assets/Scenes/Hospital.unity
+    guid: 53aca80fb0c166e4c873c6624058748f
   m_configObjects: {}

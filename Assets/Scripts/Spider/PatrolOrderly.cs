@@ -13,6 +13,7 @@ public class PatrolOrderly : MonoBehaviour
     private int orderSpot;
     private float waitTime;
     private NavMeshAgent agent;
+    private Animator anim;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class PatrolOrderly : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.destination = moveSpots[orderSpot].position;
         isChasing = GetComponent<ChasingLure>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -38,6 +40,7 @@ public class PatrolOrderly : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, agent.path.corners[1], speed * Time.deltaTime);
             transform.LookAt(agent.path.corners[1]);
+            anim.SetFloat("Move", 1);
         }
         //If cube comes into contact of a distance of 0.2 of the position wait
         if (Vector3.Distance(transform.position, moveSpots[orderSpot].position) < 1f)

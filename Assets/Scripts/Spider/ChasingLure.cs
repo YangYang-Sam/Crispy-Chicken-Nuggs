@@ -22,11 +22,16 @@ public class ChasingLure : MonoBehaviour
     public ChasingTarget target;
     private NavMeshAgent agent;
     private float timer;
+    private Animator anim;
+    private SkinnedMeshRenderer skinRenderer;
+
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         timer = delayAttack;
+        anim = GetComponentInChildren<Animator>();
+        skinRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
     }
 
     // Update is called once per frame
@@ -52,14 +57,19 @@ public class ChasingLure : MonoBehaviour
         //delay of attack
         if (timer > 0)
         {
+            anim.SetFloat("Move", 0);
+            skinRenderer.material.SetColor("_EmissionColor", Color.white * ((Mathf.Sin(Time.time*8) + 1)*0.5f));
             return;
         }
         if (agent.path.corners.Length > 1)
         {
             transform.position = Vector3.MoveTowards(transform.position, agent.path.corners[1], chasingSpeed * Time.deltaTime);
+            anim.SetFloat("Move", 2);
+            skinRenderer.material.SetColor("_EmissionColor", Color.black);
         }
         else
         {
+            anim.SetFloat("Move", 0);
             Invoke("StopChasing", 2);
         }
     }
