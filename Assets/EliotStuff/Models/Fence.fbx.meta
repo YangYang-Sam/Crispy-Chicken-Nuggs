@@ -1,22 +1,45 @@
 fileFormatVersion: 2
-guid: 710f6041fa8faff4f9daae13060f5732
+guid: cb927127149ae614f8871f288a056765
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: pasted__pPlane8
-    100002: //RootNode
-    400000: pasted__pPlane8
-    400002: //RootNode
-    2100000: CliffOneSided
-    2300000: pasted__pPlane8
-    3300000: pasted__pPlane8
-    4300000: pasted__pPlane8
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CliffOneSided
-    second: {fileID: 2100000, guid: 450e508714556404cb86ae538f819afe, type: 2}
+    100000: //RootNode
+    100002: group109
+    100004: group110
+    100006: pasted__group107
+    100008: pasted__group108
+    100010: pasted__group108_pasted__pasted__pCube6
+    100012: pasted__group109
+    100014: pasted__pasted__group107
+    100016: pasted__pasted__pasted__pCylinder9
+    100018: pasted__pasted__pCube6
+    100020: pasted__pasted__pCylinder9
+    100022: pasted__pCube6
+    100024: transform48
+    100026: transform49
+    100028: transform50
+    100030: transform51
+    400000: //RootNode
+    400002: group109
+    400004: group110
+    400006: pasted__group107
+    400008: pasted__group108
+    400010: pasted__group108_pasted__pasted__pCube6
+    400012: pasted__group109
+    400014: pasted__pasted__group107
+    400016: pasted__pasted__pasted__pCylinder9
+    400018: pasted__pasted__pCube6
+    400020: pasted__pasted__pCylinder9
+    400022: pasted__pCube6
+    400024: transform48
+    400026: transform49
+    400028: transform50
+    400030: transform51
+    2100000: FenceTextures
+    2300000: pasted__group108_pasted__pasted__pCube6
+    3300000: pasted__group108_pasted__pasted__pCube6
+    4300000: pasted__group108_pasted__pasted__pCube6
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -75,7 +98,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   importAnimation: 1

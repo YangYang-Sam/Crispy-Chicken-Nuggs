@@ -1,22 +1,47 @@
 fileFormatVersion: 2
-guid: 710f6041fa8faff4f9daae13060f5732
+guid: e5ca1c75b6d82a540869951e6532390e
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: pasted__pPlane8
-    100002: //RootNode
-    400000: pasted__pPlane8
-    400002: //RootNode
-    2100000: CliffOneSided
-    2300000: pasted__pPlane8
-    3300000: pasted__pPlane8
-    4300000: pasted__pPlane8
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CliffOneSided
-    second: {fileID: 2100000, guid: 450e508714556404cb86ae538f819afe, type: 2}
+    100000: //RootNode
+    100002: group112
+    100004: group112_pasted__group109_pasted__pasted__group108_pasted__pasted__pasted__pCube6
+    100006: pasted__group109
+    100008: pasted__group110
+    100010: pasted__pasted__group107
+    100012: pasted__pasted__group108
+    100014: pasted__pasted__group109
+    100016: pasted__pasted__pasted__group107
+    100018: pasted__pasted__pasted__pasted__pCylinder9
+    100020: pasted__pasted__pasted__pCube6
+    100022: pasted__pasted__pasted__pCylinder9
+    100024: pasted__pasted__pCube6
+    100026: transform55
+    100028: transform56
+    100030: transform57
+    100032: transform58
+    400000: //RootNode
+    400002: group112
+    400004: group112_pasted__group109_pasted__pasted__group108_pasted__pasted__pasted__pCube6
+    400006: pasted__group109
+    400008: pasted__group110
+    400010: pasted__pasted__group107
+    400012: pasted__pasted__group108
+    400014: pasted__pasted__group109
+    400016: pasted__pasted__pasted__group107
+    400018: pasted__pasted__pasted__pasted__pCylinder9
+    400020: pasted__pasted__pasted__pCube6
+    400022: pasted__pasted__pasted__pCylinder9
+    400024: pasted__pasted__pCube6
+    400026: transform55
+    400028: transform56
+    400030: transform57
+    400032: transform58
+    2100000: FenceTextures
+    2300000: group112_pasted__group109_pasted__pasted__group108_pasted__pasted__pasted__pCube6
+    3300000: group112_pasted__group109_pasted__pasted__group108_pasted__pasted__pasted__pCube6
+    4300000: group112_pasted__group109_pasted__pasted__group108_pasted__pasted__pasted__pCube6
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -75,7 +100,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   importAnimation: 1
