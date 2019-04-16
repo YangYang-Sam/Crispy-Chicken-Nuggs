@@ -7,6 +7,7 @@ public class Web : MonoBehaviour
     //private GameObject lure;
     private ChasingLure[] websound;
     public ChasingTarget target;
+    public AudioSource snapTwig;
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class Web : MonoBehaviour
     {
         if (other.gameObject.tag=="Player")
         {
+            snapTwig.Play();
             //isChasing.range = 100f;
             //lure.transform.position=transform.position;
 
