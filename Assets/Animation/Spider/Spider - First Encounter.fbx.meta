@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7b3f8c153fcccf04d899190e63607b4a
+guid: 822333255d5d91b4bb62aec131dba5e4
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -57,12 +57,13 @@ ModelImporter:
     100102: Leg_3_Right
     100104: Leg_4_Left
     100106: Leg_4_Right
-    100108: mesh_spider:spider_low_spider_low1
-    100110: pCube2
-    100112: Pincer_Left
-    100114: Pincer_Right
-    100116: Rig
-    100118: //RootNode
+    100108: mesh_doll:Group4883
+    100110: mesh_spider:spider_low_spider_low1
+    100112: pCube2
+    100114: Pincer_Left
+    100116: Pincer_Right
+    100118: Rig
+    100120: //RootNode
     400000: Back
     400002: Body
     400004: ikHandle1
@@ -117,18 +118,23 @@ ModelImporter:
     400102: Leg_3_Right
     400104: Leg_4_Left
     400106: Leg_4_Right
-    400108: mesh_spider:spider_low_spider_low1
-    400110: pCube2
-    400112: Pincer_Left
-    400114: Pincer_Right
-    400116: Rig
-    400118: //RootNode
+    400108: mesh_doll:Group4883
+    400110: mesh_spider:spider_low_spider_low1
+    400112: pCube2
+    400114: Pincer_Left
+    400116: Pincer_Right
+    400118: Rig
+    400120: //RootNode
     2100000: lambert2
     2100002: lambert1
-    2300000: pCube2
-    3300000: pCube2
+    2100004: lambert5
+    2300000: mesh_doll:Group4883
+    2300002: pCube2
+    3300000: mesh_doll:Group4883
+    3300002: pCube2
     4300000: mesh_spider:spider_low_spider_low1
     4300002: pCube2
+    4300004: mesh_doll:Group4883
     7400000: Take 001
     9500000: //RootNode
     13700000: mesh_spider:spider_low_spider_low1
@@ -184,7 +190,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 0
-    previousCalculatedGlobalScale: 0.5
+    previousCalculatedGlobalScale: 0.01
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
