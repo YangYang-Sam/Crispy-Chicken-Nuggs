@@ -41,7 +41,13 @@ ModelImporter:
     2300000: group112_pasted__group109_pasted__pasted__group108_pasted__pasted__pasted__pCube6
     3300000: group112_pasted__group109_pasted__pasted__group108_pasted__pasted__pasted__pCube6
     4300000: group112_pasted__group109_pasted__pasted__group108_pasted__pasted__pasted__pCube6
-  externalObjects: {}
+    6400000: group112_pasted__group109_pasted__pasted__group108_pasted__pasted__pasted__pCube6
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FenceTextures
+    second: {fileID: 2100000, guid: 1a6cd618e2178c14885edde9ceb0f8bb, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -74,7 +80,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1

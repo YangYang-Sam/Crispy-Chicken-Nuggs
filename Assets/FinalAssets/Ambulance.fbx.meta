@@ -315,7 +315,12 @@ ModelImporter:
     2300000: pasted__pasted__pCube1
     3300000: pasted__pasted__pCube1
     4300000: pasted__pasted__pCube1
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AmbulanceTexture
+    second: {fileID: 2100000, guid: cf5f42da26960f74b80d42c2eb01a8cf, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

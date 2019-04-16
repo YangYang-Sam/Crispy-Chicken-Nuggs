@@ -95,6 +95,23 @@ ModelImporter:
     4300028: Crisp_Bag
     4300030: Crisp_Bag_2
     4300032: pasted__pPlane1
+    6400000: Bread_1
+    6400002: Bread_2
+    6400004: Cheese
+    6400006: Crisp_Bag
+    6400008: Crisp_Bag_2
+    6400010: Ham
+    6400012: Lettuce
+    6400014: pasted__Bread_1
+    6400016: pasted__Bread_2
+    6400018: pasted__Cheese
+    6400020: pasted__Ham
+    6400022: pasted__Lettuce
+    6400024: pasted__pPlane1
+    6400026: Picnic_Basket
+    6400028: Plate_1
+    6400030: Plate_2
+    6400032: Plate_3
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -128,7 +145,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
