@@ -3246,6 +3246,19 @@ MonoBehaviour:
   lt: {fileID: 2032219742}
   openDoor: {fileID: 1873522209}
   closeSound: {fileID: 1586869554}
+--- !u!114 &252260570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252260568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90be6cfe474e0fa44aa5958ef4032816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorOpen: {fileID: 1873522209}
 --- !u!1 &272592650
 GameObject:
   m_ObjectHideFlags: 0
@@ -8910,6 +8923,11 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2324351611521150615, guid: 0692e2a54887c3b4f8d4e283737a8e00,
+        type: 3}
+      propertyPath: walklight
+      value: 
+      objectReference: {fileID: 1697181896}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0692e2a54887c3b4f8d4e283737a8e00, type: 3}
 --- !u!1 &653474672
@@ -23369,6 +23387,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692699676}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!108 &1697181896 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 7421661921868128325, guid: 0692e2a54887c3b4f8d4e283737a8e00,
+    type: 3}
+  m_PrefabInstance: {fileID: 653276041}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1699170193
 GameObject:
   m_ObjectHideFlags: 0
