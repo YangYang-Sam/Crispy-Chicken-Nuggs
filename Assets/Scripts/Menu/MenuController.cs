@@ -28,6 +28,7 @@ public class MenuController : MonoBehaviour
             }
             deathMenu.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 
@@ -38,6 +39,7 @@ public class MenuController : MonoBehaviour
         Time.timeScale = 1f;
 
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void ReturnToTitle()
@@ -50,6 +52,7 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void PauseGame()
@@ -65,6 +68,7 @@ public class MenuController : MonoBehaviour
             Time.timeScale = 0f;
 
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }

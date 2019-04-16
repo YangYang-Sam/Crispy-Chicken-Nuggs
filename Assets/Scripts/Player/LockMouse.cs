@@ -10,13 +10,10 @@ public class LockMouse : MonoBehaviour
     // Apply requested cursor state
     void Start()
     {
-        Cursor.lockState = wantedMode = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
     }
 
-    void Update()
-    {
-     
-    }
 
 }
