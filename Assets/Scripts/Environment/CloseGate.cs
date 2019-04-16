@@ -8,11 +8,13 @@ public class CloseGate : MonoBehaviour
     public float closetime;
     public float closeangle;
     public float oldangle;
+    public AudioSource closeGate;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            closeGate.Play();
             StartCoroutine(Close());
             Destroy(gameObject,closetime);
         }
