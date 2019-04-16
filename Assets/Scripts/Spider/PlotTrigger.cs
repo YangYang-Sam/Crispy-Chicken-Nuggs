@@ -5,14 +5,16 @@ using UnityEngine;
 public class PlotTrigger : MonoBehaviour
 {
     public GameObject actor;
-    public Animator anim;
+    public GameObject light;
+    public GameObject anim;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            anim.enabled = true;
-            Destroy(actor, 10.5f);
+            anim.SetActive (true);
+            light.SetActive(true);
+            Destroy(actor, 12f);
         }
     }
 }

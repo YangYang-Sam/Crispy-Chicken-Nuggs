@@ -7,11 +7,13 @@ public class RunningNoise : MonoBehaviour
     public ChasingTarget target;
     public SonarFxDescriptor sonarcontrol;
     public float sonarrate = 1f;
+    public Light walklight;
 
     private float nextsonar;
     private Vector3 old;
     private Stamina s;
     private ChasingLure[] runningsound;
+    private float passedtime=0f;
 
     void Start()
     {
@@ -56,14 +58,24 @@ public class RunningNoise : MonoBehaviour
             sonarcontrol.waveSpeed = 10f;
             if (old != transform.position)
             {
+                //light intensity 0-1 by time
+                passedtime += Time.deltaTime;
+                passedtime = Mathf.Clamp01(passedtime);
+                walklight.intensity = Mathf.Lerp(0, 1, passedtime);
+             
+
                 if (Time.time > nextsonar)
                 {
                     nextsonar = Time.time + sonarrate;
                     sonarcontrol.origin = transform.position;
                     SonarFx.Instance.StartSonar(sonarcontrol);
-
                 }
                 old = transform.position;
+            }
+            else
+            {
+                passedtime = 0;
+                walklight.intensity = 0;
             }
         }
         
