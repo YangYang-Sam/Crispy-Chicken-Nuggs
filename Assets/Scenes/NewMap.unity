@@ -4695,6 +4695,41 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.961458, y: 3.5785255, z: 3.2781222}
   m_Center: {x: 0.113352306, y: 1.6867924, z: 0.122594714}
+--- !u!114 &301685103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301685101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43300f764e354d642abf0f0dbb612011, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Preset: 9
+  Value:
+    LowFreqAbsorption: 0.2
+    MidFreqAbsorption: 0.07
+    HighFreqAbsorption: 0.06
+    Scattering: 0.05
+    LowFreqTransmission: 0.2
+    MidFreqTransmission: 0.025
+    HighFreqTransmission: 0.01
+--- !u!114 &301685104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301685101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79e99846fd75c4438917229c144155a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TerrainSimplificationLevel: 0
+  exportAllChildren: 1
 --- !u!1 &306705148
 GameObject:
   m_ObjectHideFlags: 0
@@ -4998,6 +5033,7 @@ Transform:
   m_Children:
   - {fileID: 131525798}
   - {fileID: 1513083742}
+  - {fileID: 704725093}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8177,19 +8213,21 @@ MonoBehaviour:
   reflections: 1
   indirectBinaural: 1
   indirectMixLevel: 1
-  simulationType: 0
-  uniqueIdentifier: 
+  simulationType: 1
+  uniqueIdentifier: Clock
   avoidSilenceDuringInit: 0
   overrideHRTFIndex: 0
   hrtfIndex: 0
-  bakingRadius: 16
+  bakingRadius: 4
   useAllProbeBoxes: 0
-  probeBoxes: []
-  bakedProbeNames: []
-  bakedProbeDataSizes: 
-  bakedDataSize: 0
+  probeBoxes:
+  - {fileID: 1052715798}
+  bakedProbeNames:
+  - Inside
+  bakedProbeDataSizes: 4e380000
+  bakedDataSize: 14414
   bakedStatsFoldout: 0
-  bakeToggle: 0
+  bakeToggle: 1
   bakedDataIdentifier:
     identifier: 0
     type: 0
@@ -9226,7 +9264,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622502456}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -282.01, y: 640.2319, z: 648.42}
+  m_LocalPosition: {x: -281.31, y: 640.2319, z: 648.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 131525798}
@@ -9257,19 +9295,21 @@ MonoBehaviour:
   reflections: 1
   indirectBinaural: 1
   indirectMixLevel: 1.01
-  simulationType: 0
-  uniqueIdentifier: 
+  simulationType: 1
+  uniqueIdentifier: Ambulance
   avoidSilenceDuringInit: 0
   overrideHRTFIndex: 0
   hrtfIndex: 0
   bakingRadius: 16
   useAllProbeBoxes: 0
-  probeBoxes: []
-  bakedProbeNames: []
-  bakedProbeDataSizes: 
-  bakedDataSize: 0
+  probeBoxes:
+  - {fileID: 2037944662}
+  bakedProbeNames:
+  - Outside
+  bakedProbeDataSizes: a8a30200
+  bakedDataSize: 172968
   bakedStatsFoldout: 0
-  bakeToggle: 0
+  bakeToggle: 1
   bakedDataIdentifier:
     identifier: 0
     type: 0
@@ -11141,6 +11181,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7caace926181aa41acaacc16be785d9, type: 3}
+--- !u!1 &704725092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 704725093}
+  m_Layer: 0
+  m_Name: Probe boxes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &704725093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704725092}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2037944661}
+  - {fileID: 1052715797}
+  m_Father: {fileID: 314349896}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &719633420
 GameObject:
   m_ObjectHideFlags: 0
@@ -13882,19 +13954,21 @@ MonoBehaviour:
   reflections: 1
   indirectBinaural: 1
   indirectMixLevel: 1
-  simulationType: 0
-  uniqueIdentifier: 
+  simulationType: 1
+  uniqueIdentifier: Tap
   avoidSilenceDuringInit: 0
   overrideHRTFIndex: 0
   hrtfIndex: 0
-  bakingRadius: 16
+  bakingRadius: 4
   useAllProbeBoxes: 0
-  probeBoxes: []
-  bakedProbeNames: []
-  bakedProbeDataSizes: 
-  bakedDataSize: 0
+  probeBoxes:
+  - {fileID: 1052715798}
+  bakedProbeNames:
+  - Inside
+  bakedProbeDataSizes: 4e380000
+  bakedDataSize: 14414
   bakedStatsFoldout: 0
-  bakeToggle: 0
+  bakeToggle: 1
   bakedDataIdentifier:
     identifier: 0
     type: 0
@@ -16296,6 +16370,95 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1052715796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1052715797}
+  - component: {fileID: 1052715798}
+  m_Layer: 0
+  m_Name: Inside
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1052715797
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052715796}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 84.624, y: 2.356, z: 432.508}
+  m_LocalScale: {x: 11.824347, y: 4.214651, z: 20.636969}
+  m_Children: []
+  m_Father: {fileID: 704725093}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1052715798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052715796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ea38fb6afe48f4d8a095ea13565fa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placementStrategy: 2
+  horizontalSpacing: 6.1
+  heightAboveFloor: 2
+  maxNumTriangles: 64
+  maxOctreeDepth: 2
+  dataSize: 14586
+  probeSpherePoints:
+  - 81.574
+  - 2.2431464
+  - -441.658
+  - 81.574
+  - 2.2431493
+  - -435.55798
+  - 81.574
+  - 2.2431464
+  - -429.458
+  - 81.574
+  - 2.243147
+  - -423.358
+  - 87.674
+  - 3.5382094
+  - -441.658
+  - 87.674
+  - 2.243147
+  - -435.55798
+  - 87.674
+  - 1.8968525
+  - -429.458
+  - 87.674
+  - 3.8710494
+  - -423.358
+  probeSphereRadii:
+  - 6.1
+  - 6.1
+  - 6.1
+  - 6.1
+  - 6.1
+  - 6.1
+  - 6.1
+  - 6.1
+  dataLayerInfo:
+  - name: Clock
+    identifier:
+      identifier: 0
+      type: 0
+    size: 14414
 --- !u!1 &1058871523
 GameObject:
   m_ObjectHideFlags: 0
@@ -18799,19 +18962,21 @@ MonoBehaviour:
   reflections: 1
   indirectBinaural: 1
   indirectMixLevel: 1
-  simulationType: 0
-  uniqueIdentifier: 
+  simulationType: 1
+  uniqueIdentifier: T.V
   avoidSilenceDuringInit: 0
   overrideHRTFIndex: 0
   hrtfIndex: 0
-  bakingRadius: 16
+  bakingRadius: 4
   useAllProbeBoxes: 0
-  probeBoxes: []
-  bakedProbeNames: []
-  bakedProbeDataSizes: 
-  bakedDataSize: 0
+  probeBoxes:
+  - {fileID: 1052715798}
+  bakedProbeNames:
+  - Inside
+  bakedProbeDataSizes: 4e380000
+  bakedDataSize: 14414
   bakedStatsFoldout: 0
-  bakeToggle: 0
+  bakeToggle: 1
   bakedDataIdentifier:
     identifier: 0
     type: 0
@@ -22773,8 +22938,8 @@ MonoBehaviour:
     IrradianceMinDistance: 1
   updateComponents: 1
   currentAudioListener: {fileID: 0}
-  showLoadTimeOptions: 0
-  showMassBakingOptions: 0
+  showLoadTimeOptions: 1
+  showMassBakingOptions: 1
   layerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -24263,19 +24428,21 @@ MonoBehaviour:
   reflections: 1
   indirectBinaural: 1
   indirectMixLevel: 1
-  simulationType: 0
-  uniqueIdentifier: 
+  simulationType: 1
+  uniqueIdentifier: Door bang
   avoidSilenceDuringInit: 0
   overrideHRTFIndex: 0
   hrtfIndex: 0
   bakingRadius: 16
   useAllProbeBoxes: 0
-  probeBoxes: []
-  bakedProbeNames: []
-  bakedProbeDataSizes: 
-  bakedDataSize: 0
-  bakedStatsFoldout: 0
-  bakeToggle: 0
+  probeBoxes:
+  - {fileID: 2037944662}
+  bakedProbeNames:
+  - Outside
+  bakedProbeDataSizes: a8a30200
+  bakedDataSize: 172968
+  bakedStatsFoldout: 1
+  bakeToggle: 1
   bakedDataIdentifier:
     identifier: 0
     type: 0
@@ -28731,7 +28898,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 2b3768b162829f4459f80aa6f13f4347, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 0.36
   Loop: 0
   Mute: 0
   Spatialize: 1
@@ -29709,6 +29876,111 @@ MonoBehaviour:
     waveInterval: 1000
     waveSpeed: 3
   sonarrate: 2
+--- !u!1 &2037944660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2037944661}
+  - component: {fileID: 2037944662}
+  m_Layer: 0
+  m_Name: Outside
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2037944661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037944660}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 64.85, y: 4.84, z: 432.39}
+  m_LocalScale: {x: 26.259068, y: 9.038193, z: 20.380226}
+  m_Children: []
+  m_Father: {fileID: 704725093}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2037944662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037944660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ea38fb6afe48f4d8a095ea13565fa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placementStrategy: 2
+  horizontalSpacing: 3.6
+  heightAboveFloor: 1.9
+  maxNumTriangles: 64
+  maxOctreeDepth: 2
+  dataSize: 173308
+  probeSpherePoints:
+  - 77.45
+  - 7.3301525
+  - -441.39
+  - 77.45
+  - 2.1432323
+  - -441.39
+  - 77.45
+  - 7.330149
+  - -437.79
+  - 77.45
+  - 2.1432323
+  - -437.79
+  - 77.45
+  - 7.330137
+  - -434.19
+  - 77.45
+  - 2.1432333
+  - -434.19
+  - 77.45
+  - 7.3301225
+  - -430.59003
+  - 77.45
+  - 2.4831471
+  - -430.59003
+  - 77.45
+  - 7.330108
+  - -426.99002
+  - 77.45
+  - 2.1432323
+  - -426.99002
+  - 77.45
+  - 7.3300934
+  - -423.39
+  - 77.45
+  - 2.1432328
+  - -423.39
+  probeSphereRadii:
+  - 3.6
+  - 3.6
+  - 3.6
+  - 3.6
+  - 3.6
+  - 3.6
+  - 3.6
+  - 3.6
+  - 3.6
+  - 3.6
+  - 3.6
+  - 3.6
+  dataLayerInfo:
+  - name: Ambulance
+    identifier:
+      identifier: 0
+      type: 0
+    size: 172968
 --- !u!1 &2040829456
 GameObject:
   m_ObjectHideFlags: 0
