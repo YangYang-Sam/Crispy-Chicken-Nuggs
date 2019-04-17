@@ -11,10 +11,12 @@ public class MenuController : MonoBehaviour
     public bool isDead=false;
     public GameObject deathMenu;
     public float menuTimer=2f;
+    public GameObject player;
 
     void Start()
     {
-
+        var gs = FindObjectOfType<GameSaver>();
+        player.transform.position = gs.lastCheckPiontPos;
     }
 
     void Update()
@@ -50,7 +52,8 @@ public class MenuController : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
