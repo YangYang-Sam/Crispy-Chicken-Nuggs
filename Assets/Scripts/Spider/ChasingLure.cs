@@ -17,6 +17,10 @@ public class ChasingLure : MonoBehaviour
     public float delayAttack=2f;
     public float chasingSpeed=10f;
 
+    public AudioSource spiderWalk;
+    public AudioSource spiderEyes;
+    public bool mute;
+
     public bool isChasing = false;
 
     public ChasingTarget target;
@@ -28,6 +32,7 @@ public class ChasingLure : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spiderWalk.Play();
         agent = GetComponent<NavMeshAgent>();
         timer = delayAttack;
         anim = GetComponentInChildren<Animator>();
@@ -39,6 +44,7 @@ public class ChasingLure : MonoBehaviour
     {
         if (isChasing)
         {
+            spiderWalk.pitch = Random.Range(1.75f, 2.00f);
             if (timer > 0)
             {
                 timer-=Time.deltaTime;
@@ -58,6 +64,8 @@ public class ChasingLure : MonoBehaviour
         if (timer > 0)
         {
             anim.SetFloat("Move", 0);
+            spiderEyes.Play();
+            spiderWalk.volume = Random.Range(0.0f, 0.01f);
             skinRenderer.material.SetColor("_EmissionColor", Color.white * ((Mathf.Sin(Time.time*8) + 1)*0.5f));
             return;
         }
@@ -65,11 +73,14 @@ public class ChasingLure : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, agent.path.corners[1], chasingSpeed * Time.deltaTime);
             anim.SetFloat("Move", 2);
+            spiderWalk.volume = Random.Range(1.0f, 1.01f);
             skinRenderer.material.SetColor("_EmissionColor", Color.black);
         }
         else
         {
+            spiderWalk.pitch = Random.Range(1.00f, 1.00f);
             anim.SetFloat("Move", 0);
+            spiderWalk.volume = Random.Range(0.0f, 0.01f);
             Invoke("StopChasing", 2);
         }
     }
@@ -77,6 +88,7 @@ public class ChasingLure : MonoBehaviour
     private void StopChasing()
     {
         isChasing = false;
+        spiderWalk.volume = Random.Range(1.0f, 1.01f);
     }
 
     public void UpdateTarget(ChasingTarget newTarget)
