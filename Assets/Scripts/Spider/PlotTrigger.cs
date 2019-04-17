@@ -9,11 +9,17 @@ public class PlotTrigger : MonoBehaviour
     public GameObject anim;
     public AudioSource windowBreak;
 
+    private bool soundplayed=false;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            windowBreak.Play();
+            if (soundplayed == false)
+            {
+                windowBreak.Play();
+                soundplayed = true;
+            }
             anim.SetActive (true);
             light.SetActive(true);
             Destroy(actor, 12f);
