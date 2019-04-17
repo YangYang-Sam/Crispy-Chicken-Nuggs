@@ -6,6 +6,7 @@ public class CheckCollider : MonoBehaviour
 {
     public Animator anim;
     public Player p;
+    public PlayerMove pm;
     public MenuController d;
  
     void Start()
@@ -27,6 +28,7 @@ public class CheckCollider : MonoBehaviour
             anim.Play("death");
             //off player controller
             p.enabled = false;
+            pm.enabled = false;
             //open death menu
             d.isDead = true;
         }
@@ -43,6 +45,7 @@ public class CheckCollider : MonoBehaviour
             anim.Play("death");
             //off player controller
             p.enabled = false;
+            pm.enabled = false;
             //open death menu
             d.isDead = true;
         }
