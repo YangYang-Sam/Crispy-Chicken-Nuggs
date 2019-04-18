@@ -22,6 +22,8 @@ public class TitleMenu : MonoBehaviour
     public void NewGame()
     {
         SceneManager.LoadScene(newGamescene);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void QuitGame()
