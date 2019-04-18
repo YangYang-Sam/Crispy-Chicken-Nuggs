@@ -10,9 +10,10 @@ public class PickUpHint : MonoBehaviour
     public float holdingtimer = 1f;
     public Pickup p;
 
+    private float timesaver;
     void Start()
     {
-        
+        timesaver = holdingtimer;
     }
 
 
@@ -33,7 +34,7 @@ public class PickUpHint : MonoBehaviour
             }
             else
             {
-                holdingtimer = 1f;
+                holdingtimer = timesaver;
             }
         }
         if (p.isHolding == false)
