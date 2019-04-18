@@ -64,6 +64,7 @@ public class ChasingLure : MonoBehaviour
         if (timer > 0)
         {
             anim.SetFloat("Move", 0);
+            spiderEyes.volume = Random.Range(2.0f, 2.02f);
             spiderEyes.Play();
             spiderWalk.volume = Random.Range(0.0f, 0.01f);
             skinRenderer.material.SetColor("_EmissionColor", Color.white * ((Mathf.Sin(Time.time*8) + 1)*0.5f));
