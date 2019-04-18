@@ -9,6 +9,8 @@ public class Monitor : MonoBehaviour
     public float timer=2f;
     public bool playplot=false;
     public TitleMenu fade;
+    public AudioSource heartLoop;
+    public AudioSource heartStop;
 
     private float nextup;
 
@@ -43,6 +45,8 @@ public class Monitor : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            heartStop.Stop();
+            heartLoop.Play();
             playplot = true;
         }
     }
