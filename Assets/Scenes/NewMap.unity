@@ -5064,41 +5064,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.961458, y: 3.5785255, z: 3.2781222}
   m_Center: {x: 0.113352306, y: 1.6867924, z: 0.122594714}
---- !u!114 &301685103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 301685101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43300f764e354d642abf0f0dbb612011, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Preset: 9
-  Value:
-    LowFreqAbsorption: 0.2
-    MidFreqAbsorption: 0.07
-    HighFreqAbsorption: 0.06
-    Scattering: 0.05
-    LowFreqTransmission: 0.2
-    MidFreqTransmission: 0.025
-    HighFreqTransmission: 0.01
---- !u!114 &301685104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 301685101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79e99846fd75c4438917229c144155a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TerrainSimplificationLevel: 0
-  exportAllChildren: 1
 --- !u!1 &306705148
 GameObject:
   m_ObjectHideFlags: 0
@@ -10511,11 +10476,10 @@ MonoBehaviour:
   bakingRadius: 16
   useAllProbeBoxes: 0
   probeBoxes:
-  - {fileID: 2037944662}
-  bakedProbeNames:
-  - Outside
-  bakedProbeDataSizes: a8a30200
-  bakedDataSize: 172968
+  - {fileID: 0}
+  bakedProbeNames: []
+  bakedProbeDataSizes: 
+  bakedDataSize: 0
   bakedStatsFoldout: 0
   bakeToggle: 1
   bakedDataIdentifier:
@@ -11446,7 +11410,7 @@ PrefabInstance:
     - target: {fileID: 8022409148860308934, guid: 0692e2a54887c3b4f8d4e283737a8e00,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 236.57
+      value: 52.93
       objectReference: {fileID: 0}
     - target: {fileID: 8022409148860308934, guid: 0692e2a54887c3b4f8d4e283737a8e00,
         type: 3}
@@ -11456,7 +11420,7 @@ PrefabInstance:
     - target: {fileID: 8022409148860308934, guid: 0692e2a54887c3b4f8d4e283737a8e00,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 364.61
+      value: 429.4
       objectReference: {fileID: 0}
     - target: {fileID: 8022409148860308934, guid: 0692e2a54887c3b4f8d4e283737a8e00,
         type: 3}
@@ -12438,7 +12402,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2037944661}
   - {fileID: 1052715797}
   m_Father: {fileID: 314349896}
   m_RootOrder: 2
@@ -17821,7 +17784,7 @@ Transform:
   m_LocalScale: {x: 11.824347, y: 4.214651, z: 20.636969}
   m_Children: []
   m_Father: {fileID: 704725093}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1052715798
 MonoBehaviour:
@@ -26612,11 +26575,10 @@ MonoBehaviour:
   bakingRadius: 16
   useAllProbeBoxes: 0
   probeBoxes:
-  - {fileID: 2037944662}
-  bakedProbeNames:
-  - Outside
-  bakedProbeDataSizes: a8a30200
-  bakedDataSize: 172968
+  - {fileID: 0}
+  bakedProbeNames: []
+  bakedProbeDataSizes: 
+  bakedDataSize: 0
   bakedStatsFoldout: 1
   bakeToggle: 1
   bakedDataIdentifier:
@@ -33075,111 +33037,6 @@ MonoBehaviour:
     waveInterval: 1000
     waveSpeed: 3
   sonarrate: 2
---- !u!1 &2037944660
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2037944661}
-  - component: {fileID: 2037944662}
-  m_Layer: 0
-  m_Name: Outside
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2037944661
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2037944660}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 64.85, y: 4.84, z: 432.39}
-  m_LocalScale: {x: 26.259068, y: 9.038193, z: 20.380226}
-  m_Children: []
-  m_Father: {fileID: 704725093}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2037944662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2037944660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9ea38fb6afe48f4d8a095ea13565fa0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  placementStrategy: 2
-  horizontalSpacing: 3.6
-  heightAboveFloor: 1.9
-  maxNumTriangles: 64
-  maxOctreeDepth: 2
-  dataSize: 173308
-  probeSpherePoints:
-  - 77.45
-  - 7.3301525
-  - -441.39
-  - 77.45
-  - 2.1432323
-  - -441.39
-  - 77.45
-  - 7.330149
-  - -437.79
-  - 77.45
-  - 2.1432323
-  - -437.79
-  - 77.45
-  - 7.330137
-  - -434.19
-  - 77.45
-  - 2.1432333
-  - -434.19
-  - 77.45
-  - 7.3301225
-  - -430.59003
-  - 77.45
-  - 2.4831471
-  - -430.59003
-  - 77.45
-  - 7.330108
-  - -426.99002
-  - 77.45
-  - 2.1432323
-  - -426.99002
-  - 77.45
-  - 7.3300934
-  - -423.39
-  - 77.45
-  - 2.1432328
-  - -423.39
-  probeSphereRadii:
-  - 3.6
-  - 3.6
-  - 3.6
-  - 3.6
-  - 3.6
-  - 3.6
-  - 3.6
-  - 3.6
-  - 3.6
-  - 3.6
-  - 3.6
-  - 3.6
-  dataLayerInfo:
-  - name: Ambulance
-    identifier:
-      identifier: 0
-      type: 0
-    size: 172968
 --- !u!1 &2040829456
 GameObject:
   m_ObjectHideFlags: 0
