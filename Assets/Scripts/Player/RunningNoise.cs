@@ -8,6 +8,8 @@ public class RunningNoise : MonoBehaviour
     public SonarFxDescriptor sonarcontrol;
     public float sonarrate = 1f;
     public Light walklight;
+    public AudioSource footStep;
+    public AudioSource run;
 
     private float nextsonar;
     private Vector3 old;
@@ -42,6 +44,8 @@ public class RunningNoise : MonoBehaviour
                 if (Time.time > nextsonar)
                 {
                     nextsonar = Time.time + sonarrate;
+                    run.pitch = Random.Range(0.75f, 1.25f);
+                    run.Play();
                     sonarcontrol.origin = transform.position;
                     SonarFx.Instance.StartSonar(sonarcontrol);
 
@@ -67,6 +71,8 @@ public class RunningNoise : MonoBehaviour
                 if (Time.time > nextsonar)
                 {
                     nextsonar = Time.time + sonarrate;
+                    footStep.pitch = Random.Range(0.75f, 1.25f);
+                    footStep.Play();
                     sonarcontrol.origin = transform.position;
                     SonarFx.Instance.StartSonar(sonarcontrol);
                 }

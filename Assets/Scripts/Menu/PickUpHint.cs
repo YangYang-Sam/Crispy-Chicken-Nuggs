@@ -25,10 +25,6 @@ public class PickUpHint : MonoBehaviour
                 pickuphint.SetActive(false);
                 throwhint.SetActive(true);
             }
-            else
-            {
-                throwhint.SetActive(false);
-            }
 
             if (p.isHolding)
             {
@@ -39,6 +35,10 @@ public class PickUpHint : MonoBehaviour
             {
                 holdingtimer = 1f;
             }
+        }
+        if (p.isHolding == false)
+        {
+            throwhint.SetActive(false);
         }
     }
 
