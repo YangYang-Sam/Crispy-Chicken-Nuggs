@@ -3953,7 +3953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newGamescene: Hospital
-  fade: {fileID: 0}
+  fade: {fileID: 272592650}
 --- !u!1 &273120819
 GameObject:
   m_ObjectHideFlags: 0
@@ -27913,21 +27913,6 @@ PrefabInstance:
       propertyPath: moveSpots.Array.data[3]
       value: 
       objectReference: {fileID: 1463847132}
-    - target: {fileID: 3524709484488421809, guid: 00c452fdc0268324faa3db33b946bc3c,
-        type: 3}
-      propertyPath: startWaitTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3524709484488421809, guid: 00c452fdc0268324faa3db33b946bc3c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3524709484488421808, guid: 00c452fdc0268324faa3db33b946bc3c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3524709484488421808, guid: 00c452fdc0268324faa3db33b946bc3c,
         type: 3}
       propertyPath: spiderWalk
@@ -27938,26 +27923,6 @@ PrefabInstance:
       propertyPath: spiderEyes
       value: 
       objectReference: {fileID: 843999149}
-    - target: {fileID: 4955049558754413854, guid: 00c452fdc0268324faa3db33b946bc3c,
-        type: 3}
-      propertyPath: moveSpots.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4955049558754413854, guid: 00c452fdc0268324faa3db33b946bc3c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4955049558754413854, guid: 00c452fdc0268324faa3db33b946bc3c,
-        type: 3}
-      propertyPath: speed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4955049558754413854, guid: 00c452fdc0268324faa3db33b946bc3c,
-        type: 3}
-      propertyPath: startWaitTime
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4955049558754413854, guid: 00c452fdc0268324faa3db33b946bc3c,
         type: 3}
       propertyPath: moveSpots.Array.data[0]
@@ -27978,46 +27943,6 @@ PrefabInstance:
       propertyPath: moveSpots.Array.data[3]
       value: 
       objectReference: {fileID: 1917314594}
-    - target: {fileID: 3524709484488421775, guid: 00c452fdc0268324faa3db33b946bc3c,
-        type: 3}
-      propertyPath: sonarcontrol.waveColor.key0.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3524709484488421775, guid: 00c452fdc0268324faa3db33b946bc3c,
-        type: 3}
-      propertyPath: sonarcontrol.waveColor.key0.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3524709484488421775, guid: 00c452fdc0268324faa3db33b946bc3c,
-        type: 3}
-      propertyPath: sonarcontrol.waveColor.key0.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3524709484488421775, guid: 00c452fdc0268324faa3db33b946bc3c,
-        type: 3}
-      propertyPath: sonarcontrol.waveColor.key1.r
-      value: 0.6132076
-      objectReference: {fileID: 0}
-    - target: {fileID: 3524709484488421775, guid: 00c452fdc0268324faa3db33b946bc3c,
-        type: 3}
-      propertyPath: sonarcontrol.waveColor.key1.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3524709484488421775, guid: 00c452fdc0268324faa3db33b946bc3c,
-        type: 3}
-      propertyPath: sonarcontrol.waveColor.key1.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3524709484488421811, guid: 00c452fdc0268324faa3db33b946bc3c,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 6.122162
-      objectReference: {fileID: 0}
-    - target: {fileID: 3524709484488421811, guid: 00c452fdc0268324faa3db33b946bc3c,
-        type: 3}
-      propertyPath: m_Center.z
-      value: 0.29890442
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00c452fdc0268324faa3db33b946bc3c, type: 3}
 --- !u!1 &1692699676

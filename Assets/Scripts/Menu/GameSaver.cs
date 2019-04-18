@@ -15,6 +15,7 @@ public class GameSaver : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(instance);
+            //set player to original position
             lastCheckPiontPos = p.transform.position;
         }
         else
