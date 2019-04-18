@@ -42,7 +42,8 @@ public class CheckCollider : MonoBehaviour
         //print(hit.gameObject.name);
         if (hit.gameObject.CompareTag("Enemey"))
         {
-            Debug.Log("aaaaaaaah");
+            Debug.Log("oooooh");
+            death.Play();
             anim.enabled = true;
             anim.Play("death");
             //off player controller

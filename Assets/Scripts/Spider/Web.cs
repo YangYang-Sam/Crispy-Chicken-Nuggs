@@ -8,11 +8,13 @@ public class Web : MonoBehaviour
     private ChasingLure[] websound;
     public ChasingTarget target;
     public AudioSource snapTwig;
+    public PlayerMove pm;
+    public float speeddivide=2f;
 
     private void Start()
     {
         websound=FindObjectsOfType<ChasingLure>();
-        
+        pm = FindObjectOfType<PlayerMove>();
         //lure = GameObject.FindGameObjectWithTag("Lure");
     }
 
@@ -23,12 +25,18 @@ public class Web : MonoBehaviour
             snapTwig.Play();
             //isChasing.range = 100f;
             //lure.transform.position=transform.position;
+            pm.speed = pm.speed / speeddivide;
 
-            target.position = transform.position;
+            target.position = other.transform.position;
             foreach (var w in websound)
             {
                 w.UpdateTarget(target);
             }
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        pm.speed = pm.startspeed;
     }
 }
