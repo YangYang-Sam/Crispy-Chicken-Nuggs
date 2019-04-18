@@ -8,6 +8,7 @@ public class CheckCollider : MonoBehaviour
     public Player p;
     public PlayerMove pm;
     public MenuController d;
+    public AudioSource death;
  
     void Start()
     {
@@ -23,6 +24,7 @@ public class CheckCollider : MonoBehaviour
     {
         if (hit.gameObject.CompareTag("Enemey"))
         {
+            death.Play();
             Debug.Log("aaaaaaaah");
             anim.enabled = true;
             anim.Play("death");
