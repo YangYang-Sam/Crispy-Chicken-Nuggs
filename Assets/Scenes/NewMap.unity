@@ -8814,6 +8814,36 @@ PrefabInstance:
       propertyPath: spiderEyes
       value: 
       objectReference: {fileID: 1684861184}
+    - target: {fileID: 3524709484488421775, guid: 00c452fdc0268324faa3db33b946bc3c,
+        type: 3}
+      propertyPath: sonarcontrol.waveColor.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524709484488421775, guid: 00c452fdc0268324faa3db33b946bc3c,
+        type: 3}
+      propertyPath: sonarcontrol.waveColor.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524709484488421775, guid: 00c452fdc0268324faa3db33b946bc3c,
+        type: 3}
+      propertyPath: sonarcontrol.waveColor.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524709484488421775, guid: 00c452fdc0268324faa3db33b946bc3c,
+        type: 3}
+      propertyPath: sonarcontrol.waveColor.key1.r
+      value: 0.6415094
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524709484488421775, guid: 00c452fdc0268324faa3db33b946bc3c,
+        type: 3}
+      propertyPath: sonarcontrol.waveColor.key1.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524709484488421775, guid: 00c452fdc0268324faa3db33b946bc3c,
+        type: 3}
+      propertyPath: sonarcontrol.waveColor.key1.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4955049558754413854, guid: 00c452fdc0268324faa3db33b946bc3c,
         type: 3}
       propertyPath: moveSpots.Array.size
@@ -8854,36 +8884,6 @@ PrefabInstance:
       propertyPath: moveSpots.Array.data[3]
       value: 
       objectReference: {fileID: 1917314594}
-    - target: {fileID: 3524709484488421775, guid: 00c452fdc0268324faa3db33b946bc3c,
-        type: 3}
-      propertyPath: sonarcontrol.waveColor.key0.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3524709484488421775, guid: 00c452fdc0268324faa3db33b946bc3c,
-        type: 3}
-      propertyPath: sonarcontrol.waveColor.key0.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3524709484488421775, guid: 00c452fdc0268324faa3db33b946bc3c,
-        type: 3}
-      propertyPath: sonarcontrol.waveColor.key0.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3524709484488421775, guid: 00c452fdc0268324faa3db33b946bc3c,
-        type: 3}
-      propertyPath: sonarcontrol.waveColor.key1.r
-      value: 0.6415094
-      objectReference: {fileID: 0}
-    - target: {fileID: 3524709484488421775, guid: 00c452fdc0268324faa3db33b946bc3c,
-        type: 3}
-      propertyPath: sonarcontrol.waveColor.key1.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3524709484488421775, guid: 00c452fdc0268324faa3db33b946bc3c,
-        type: 3}
-      propertyPath: sonarcontrol.waveColor.key1.b
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3524709483721064593, guid: 00c452fdc0268324faa3db33b946bc3c,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -12006,25 +12006,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8022409148860308932, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-        type: 3}
-      propertyPath: sonarClap
-      value: 
-      objectReference: {fileID: 1513083741}
-    - target: {fileID: 8022409148860308932, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-        type: 3}
-      propertyPath: pause
-      value: 
-      objectReference: {fileID: 285410726}
-    - target: {fileID: 8022409148860308932, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-        type: 3}
-      propertyPath: UEye
-      value: 
-      objectReference: {fileID: 1899813083}
     - target: {fileID: 8022409148860308934, guid: 0692e2a54887c3b4f8d4e283737a8e00,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 185.1
+      value: 56.08
       objectReference: {fileID: 0}
     - target: {fileID: 8022409148860308934, guid: 0692e2a54887c3b4f8d4e283737a8e00,
         type: 3}
@@ -12034,7 +12019,7 @@ PrefabInstance:
     - target: {fileID: 8022409148860308934, guid: 0692e2a54887c3b4f8d4e283737a8e00,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 304.1
+      value: 433.11
       objectReference: {fileID: 0}
     - target: {fileID: 8022409148860308934, guid: 0692e2a54887c3b4f8d4e283737a8e00,
         type: 3}
@@ -12076,6 +12061,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8022409148860308932, guid: 0692e2a54887c3b4f8d4e283737a8e00,
+        type: 3}
+      propertyPath: sonarClap
+      value: 
+      objectReference: {fileID: 1513083741}
+    - target: {fileID: 8022409148860308932, guid: 0692e2a54887c3b4f8d4e283737a8e00,
+        type: 3}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 285410726}
+    - target: {fileID: 8022409148860308932, guid: 0692e2a54887c3b4f8d4e283737a8e00,
+        type: 3}
+      propertyPath: UEye
+      value: 
+      objectReference: {fileID: 1899813083}
     - target: {fileID: 564717858, guid: 0692e2a54887c3b4f8d4e283737a8e00, type: 3}
       propertyPath: d
       value: 
@@ -12088,6 +12088,21 @@ PrefabInstance:
       propertyPath: death
       value: 
       objectReference: {fileID: 1993749151}
+    - target: {fileID: 2324351611521150615, guid: 0692e2a54887c3b4f8d4e283737a8e00,
+        type: 3}
+      propertyPath: walklight
+      value: 
+      objectReference: {fileID: 1697181896}
+    - target: {fileID: 2324351611521150615, guid: 0692e2a54887c3b4f8d4e283737a8e00,
+        type: 3}
+      propertyPath: footStep
+      value: 
+      objectReference: {fileID: 290502675}
+    - target: {fileID: 2324351611521150615, guid: 0692e2a54887c3b4f8d4e283737a8e00,
+        type: 3}
+      propertyPath: run
+      value: 
+      objectReference: {fileID: 1564403394}
     - target: {fileID: 8022409149507689055, guid: 0692e2a54887c3b4f8d4e283737a8e00,
         type: 3}
       propertyPath: m_Enabled
@@ -12113,21 +12128,6 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.b
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2324351611521150615, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-        type: 3}
-      propertyPath: walklight
-      value: 
-      objectReference: {fileID: 1697181896}
-    - target: {fileID: 2324351611521150615, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-        type: 3}
-      propertyPath: footStep
-      value: 
-      objectReference: {fileID: 290502675}
-    - target: {fileID: 2324351611521150615, guid: 0692e2a54887c3b4f8d4e283737a8e00,
-        type: 3}
-      propertyPath: run
-      value: 
-      objectReference: {fileID: 1564403394}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0692e2a54887c3b4f8d4e283737a8e00, type: 3}
 --- !u!1 &653474672
@@ -35523,12 +35523,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9031526739233394437, guid: aeab9c81bc5c8794c9d6d4a21cde877f,
+    - target: {fileID: 4944194079278640091, guid: aeab9c81bc5c8794c9d6d4a21cde877f,
         type: 3}
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 4944194079278640091, guid: aeab9c81bc5c8794c9d6d4a21cde877f,
+    - target: {fileID: 9031526739233394437, guid: aeab9c81bc5c8794c9d6d4a21cde877f,
         type: 3}
       propertyPath: m_RootOrder
       value: 9

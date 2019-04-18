@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f7f438c56fffe4d971e2e2f4cc4651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wave: {fileID: 100000, guid: b93a00d126533c548b59b0c9a6426932, type: 3}
+  wave: {fileID: 5588205641047274591, guid: fd2e458b95071a24fbab9dfac0ac8db4, type: 3}
   target:
     position: {x: 0, y: 0, z: 0}
     range: 40
