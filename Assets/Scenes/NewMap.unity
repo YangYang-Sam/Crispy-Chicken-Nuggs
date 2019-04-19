@@ -4431,6 +4431,7 @@ MonoBehaviour:
     waveInterval: 1000
     waveSpeed: 20
   sonarPostion: {fileID: 618384643}
+  p: {fileID: 570757945}
 --- !u!1 &260729755
 GameObject:
   m_ObjectHideFlags: 0
@@ -16667,6 +16668,8 @@ MonoBehaviour:
   light: {fileID: 1075367415}
   anim: {fileID: 252260568}
   windowBreak: {fileID: 1643664134}
+  p: {fileID: 570757945}
+  b: {fileID: 908838899}
 --- !u!65 &908838899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36204,11 +36207,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6516544940723703591, guid: aeab9c81bc5c8794c9d6d4a21cde877f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6516544940423870908, guid: aeab9c81bc5c8794c9d6d4a21cde877f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -36223,6 +36221,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516544940723703591, guid: aeab9c81bc5c8794c9d6d4a21cde877f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aeab9c81bc5c8794c9d6d4a21cde877f, type: 3}

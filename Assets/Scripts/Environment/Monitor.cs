@@ -11,6 +11,8 @@ public class Monitor : MonoBehaviour
     public TitleMenu fade;
     public AudioSource heartLoop;
     public AudioSource heartStop;
+    public Animator ending;
+    public Player p;
 
     private float nextup;
 
@@ -47,6 +49,8 @@ public class Monitor : MonoBehaviour
         {
             heartStop.Stop();
             heartLoop.Play();
+            p.cannotpause = true;
+            ending.enabled = true;
             playplot = true;
         }
     }

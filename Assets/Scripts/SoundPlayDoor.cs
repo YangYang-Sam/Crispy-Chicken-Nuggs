@@ -7,13 +7,8 @@ public class SoundPlayDoor : MonoBehaviour
     public AudioSource doorOpen;
     public SonarFxDescriptor sonarcontrol;
     public Transform sonarPostion;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Player p;
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -22,6 +17,7 @@ public class SoundPlayDoor : MonoBehaviour
     private void PlaySound()
     {
         doorOpen.Play();
+        p.cannotpause = false;
         sonarcontrol.origin = sonarPostion.position;
         SonarFx.Instance.StartSonar(sonarcontrol);
     }

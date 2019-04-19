@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private float xMouse;
     private float yMouse;
     private float nextsonar;
+    public bool cannotpause=false;
     public AudioSource sonarClap;
 
     //grivaty
@@ -115,7 +116,7 @@ public class Player : MonoBehaviour
 
         //Pause Game
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape)&&cannotpause==false)
         {
             pause.PauseGame();
         }
