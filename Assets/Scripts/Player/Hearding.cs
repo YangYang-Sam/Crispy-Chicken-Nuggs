@@ -7,7 +7,7 @@ public class Hearding : MonoBehaviour
     public GameObject wave;
     private ChasingLure[] luresound;
     public ChasingTarget target;
-
+    public AudioSource landRock;
     float timer = 1;
    // private GameObject lure;
 
@@ -27,12 +27,13 @@ public class Hearding : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
+        
         if (timer > 0)
         {
             return;
         }
         var p = Instantiate(wave, transform.position, transform.rotation);
-
+        landRock.Play();
         target.position = p.transform.position;
         foreach (var l in luresound)
         {

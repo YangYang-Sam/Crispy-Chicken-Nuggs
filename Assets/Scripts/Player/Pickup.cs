@@ -12,6 +12,9 @@ public class Pickup : MonoBehaviour
     public bool isHolding = false;
     public float pickRange = 1f;
     public float throwForce = 600;
+    public AudioSource pickupRock;
+    public AudioSource chuckRock;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +53,7 @@ public class Pickup : MonoBehaviour
     {
         if (distance < pickRange)
         {
+            pickupRock.Play();
             isHolding = true;
             item.GetComponent<Rigidbody>().useGravity = false;
             item.GetComponent<Rigidbody>().detectCollisions = true;
@@ -58,6 +62,7 @@ public class Pickup : MonoBehaviour
 
     void OnMouseUp()
     {
+        chuckRock.Play();
         isHolding = false;
     }
 }
