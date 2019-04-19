@@ -7,6 +7,8 @@ public class TitleMenu : MonoBehaviour
 {
     public string newGamescene;
     public GameObject fade;
+    public AudioSource newGame;
+    public AudioSource quit;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,7 @@ public class TitleMenu : MonoBehaviour
 
     public void NewGame()
     {
+        
         SceneManager.LoadScene(newGamescene);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -28,6 +31,7 @@ public class TitleMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        
         Application.Quit();
     }
 
