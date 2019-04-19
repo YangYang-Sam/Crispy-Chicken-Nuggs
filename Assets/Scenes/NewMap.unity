@@ -12228,12 +12228,12 @@ PrefabInstance:
         type: 3}
       propertyPath: footStep
       value: 
-      objectReference: {fileID: 290502675}
+      objectReference: {fileID: 1564403394}
     - target: {fileID: 2324351611521150615, guid: 0692e2a54887c3b4f8d4e283737a8e00,
         type: 3}
       propertyPath: run
       value: 
-      objectReference: {fileID: 1564403394}
+      objectReference: {fileID: 290502675}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0692e2a54887c3b4f8d4e283737a8e00, type: 3}
 --- !u!1 &653474672
