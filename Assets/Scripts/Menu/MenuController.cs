@@ -15,8 +15,7 @@ public class MenuController : MonoBehaviour
 
     void Start()
     {
-        var gs = FindObjectOfType<GameSaver>();
-        player.transform.position = gs.lastCheckPiontPos;
+        player.transform.position = GameSaver.Instance.lastCheckPiontPos;
     }
 
     void Update()
@@ -48,6 +47,7 @@ public class MenuController : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(titleScene);
+        Destroy(GameSaver.Instance.gameObject);
     }
 
     public void Restart()
