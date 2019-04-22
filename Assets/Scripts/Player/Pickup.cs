@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +15,10 @@ public class Pickup : MonoBehaviour
     public float throwForce = 600;
     public AudioSource pickupRock;
     public AudioSource chuckRock;
-   
+
+    public event Action<bool> holdingRock;
+    public event Action throwRock;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +42,8 @@ public class Pickup : MonoBehaviour
                 //throw
                 item.GetComponent<Rigidbody>().AddForce(HoldPostion.transform.forward*throwForce);
                 isHolding = false;
+                holdingRock.Invoke(false);
+                throwRock.Invoke();
             }
         }
         else
@@ -55,6 +61,7 @@ public class Pickup : MonoBehaviour
         {
             pickupRock.Play();
             isHolding = true;
+            holdingRock.Invoke(true);
             item.GetComponent<Rigidbody>().useGravity = false;
             item.GetComponent<Rigidbody>().detectCollisions = true;
         }
@@ -64,5 +71,6 @@ public class Pickup : MonoBehaviour
     {
         chuckRock.Play();
         isHolding = false;
+        holdingRock.Invoke(false);
     }
 }

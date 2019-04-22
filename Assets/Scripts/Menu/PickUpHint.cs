@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,32 +15,35 @@ public class PickUpHint : MonoBehaviour
     void Start()
     {
         timesaver = holdingtimer;
+        p.holdingRock += P_holdingRock;
+        p.throwRock += P_throwRock;
     }
 
+    private void P_throwRock()
+    {
+        throwhint.SetActive(false);
+        pickuphint.SetActive(false);
+    }
+
+    private void P_holdingRock(bool holding)
+    {
+        pickuphint.SetActive(holding);
+        hintOn = holding;
+        if (!holding)
+            holdingtimer = timesaver;
+        if (throwhint.activeInHierarchy)
+            throwhint.SetActive(holding);
+    }
 
     void Update()
     {
-        if (hintOn)
+        if (!hintOn) return;
+        
+        holdingtimer -= Time.deltaTime;
+        if (holdingtimer < 0)
         {
-            if (holdingtimer < 0)
-            {
-                pickuphint.SetActive(false);
-                throwhint.SetActive(true);
-            }
-
-            if (p.isHolding)
-            {
-                holdingtimer -= Time.deltaTime;
-                return;
-            }
-            else
-            {
-                holdingtimer = timesaver;
-            }
-        }
-        if (p.isHolding == false)
-        {
-            throwhint.SetActive(false);
+            pickuphint.SetActive(false);
+            throwhint.SetActive(true);
         }
     }
 
@@ -47,7 +51,6 @@ public class PickUpHint : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            hintOn = true;
             pickuphint.SetActive(true);
         }
     }
@@ -56,8 +59,8 @@ public class PickUpHint : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            hintOn = false;
             pickuphint.SetActive(false);
+            throwhint.SetActive(false);
         }
     }
 }
